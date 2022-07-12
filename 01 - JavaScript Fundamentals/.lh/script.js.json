@@ -1,0 +1,1034 @@
+{
+    "sourceFile": "script.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 254,
+            "patches": [
+                {
+                    "date": 1645372848847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1645372932678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,13 +89,13 @@\n \n const dolpscore = (dolscr1, dolscr2, dolscr3) => {\n     return ((dolscr1+dolscr2+dolscr3)/3);\n }\n-dolpscore(44,23,71);\n+dolpscore(85,54,41);\n const koascore = (koascr1, koascr2, koascr3) => {\n     return ((koascr1+koascr2+koascr3)/3);\n }\n-koascore(65,54,49);\n+koascore(23,34,27);\n if(dolpscore >= koascore*2) {\n     console.log(\"dolphin wins\");\n } else {\n     console.log(\"koalas win\");\n"
+                },
+                {
+                    "date": 1645373056691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,12 @@\n const koascore = (koascr1, koascr2, koascr3) => {\n     return ((koascr1+koascr2+koascr3)/3);\n }\n koascore(23,34,27);\n-if(dolpscore >= koascore*2) {\n-    console.log(\"dolphin wins\");\n-} else {\n-    console.log(\"koalas win\");\n-}\n\\ No newline at end of file\n+\n+function checkWinner (dolpscore, koascore) {\n+    if(dolpscore >= koascore*2) {\n+        console.log(\"dolphin wins\");\n+    } else {\n+        console.log(\"koalas win\");\n+    }\n+}\n"
+                },
+                {
+                    "date": 1645373106173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,13 +87,13 @@\n //     console.log(\"coolllllllll 🌻!\");\n // }\n \n const dolpscore = (dolscr1, dolscr2, dolscr3) => {\n-    return ((dolscr1+dolscr2+dolscr3)/3);\n+   (dolscr1+dolscr2+dolscr3)/3;\n }\n dolpscore(85,54,41);\n const koascore = (koascr1, koascr2, koascr3) => {\n-    return ((koascr1+koascr2+koascr3)/3);\n+    (koascr1+koascr2+koascr3)/3;\n }\n koascore(23,34,27);\n \n function checkWinner (dolpscore, koascore) {\n"
+                },
+                {
+                    "date": 1645373213810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,11 +86,13 @@\n // if (check === 23) { //now check is a number\n //     console.log(\"coolllllllll 🌻!\");\n // }\n \n-const dolpscore = (dolscr1, dolscr2, dolscr3) => {\n+const calcAverage = (a, b, c) => (a + b + c)/3;\n+\n+const dolpscore = (dolscr1, dolscr2, dolscr3) => \n    (dolscr1+dolscr2+dolscr3)/3;\n-}\n+\n dolpscore(85,54,41);\n const koascore = (koascr1, koascr2, koascr3) => {\n     (koascr1+koascr2+koascr3)/3;\n }\n"
+                },
+                {
+                    "date": 1645373271031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,17 +88,10 @@\n // }\n \n const calcAverage = (a, b, c) => (a + b + c)/3;\n \n-const dolpscore = (dolscr1, dolscr2, dolscr3) => \n-   (dolscr1+dolscr2+dolscr3)/3;\n-\n-dolpscore(85,54,41);\n-const koascore = (koascr1, koascr2, koascr3) => {\n-    (koascr1+koascr2+koascr3)/3;\n-}\n-koascore(23,34,27);\n-\n+const dolpscore = calcAverage(85,54,41);\n+const koascore = calcAverage(23,34,27);\n function checkWinner (dolpscore, koascore) {\n     if(dolpscore >= koascore*2) {\n         console.log(\"dolphin wins\");\n     } else {\n"
+                },
+                {
+                    "date": 1645373377648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,10 @@\n const calcAverage = (a, b, c) => (a + b + c)/3;\n \n const dolpscore = calcAverage(85,54,41);\n const koascore = calcAverage(23,34,27);\n-function checkWinner (dolpscore, koascore) {\n+console.log(dolpscore, koascore);\n+const  checkWinner = function (dolpscore, koascore) {\n     if(dolpscore >= koascore*2) {\n         console.log(\"dolphin wins\");\n     } else {\n         console.log(\"koalas win\");\n"
+                },
+                {
+                    "date": 1645373418735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,9 +92,9 @@\n const dolpscore = calcAverage(85,54,41);\n const koascore = calcAverage(23,34,27);\n console.log(dolpscore, koascore);\n const  checkWinner = function (dolpscore, koascore) {\n-    if(dolpscore >= koascore*2) {\n+    if(dolpscore >= 2 * koascore) {\n         console.log(\"dolphin wins\");\n     } else {\n         console.log(\"koalas win\");\n     }\n"
+                },
+                {
+                    "date": 1645373479447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,4 +98,5 @@\n     } else {\n         console.log(\"koalas win\");\n     }\n }\n+checkWinner(dolpscore, koascore);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1645384408681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,17 +86,31 @@\n // if (check === 23) { //now check is a number\n //     console.log(\"coolllllllll 🌻!\");\n // }\n \n-const calcAverage = (a, b, c) => (a + b + c)/3;\n+//functions\n+// const calcAverage = (a, b, c) => (a + b + c)/3;\n \n-const dolpscore = calcAverage(85,54,41);\n-const koascore = calcAverage(23,34,27);\n-console.log(dolpscore, koascore);\n-const  checkWinner = function (dolpscore, koascore) {\n-    if(dolpscore >= 2 * koascore) {\n-        console.log(\"dolphin wins\");\n+// const dolpscore = calcAverage(85,54,41);\n+// const koascore = calcAverage(23,34,27);\n+// console.log(dolpscore, koascore);\n\\ No newline at end of file\n+// const  checkWinner = function (dolpscore, koascore) {\n+//     if(dolpscore >= 2 * koascore) {\n+//         console.log(\"dolphin wins\");\n+//     } else {\n+//         console.log(\"koalas win\");\n+//     }\n+// }\n+// checkWinner(dolpscore, koascore);\n+\n+//arrays\n+\n+const calctip = billvalue => {\n+    if(billvalue >= 50 && billvalue <= 300) {\n+        billvalue = (15/100)*billvalue;\n     } else {\n-        console.log(\"koalas win\");\n+        billvalue = (20/100)*billvalue;\n     }\n }\n-checkWinner(dolpscore, koascore);\n+\n+const checktip = calctip(100);\n+console.log(checktip);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1645384876763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,13 +104,9 @@\n \n //arrays\n \n const calctip = billvalue => {\n-    if(billvalue >= 50 && billvalue <= 300) {\n-        billvalue = (15/100)*billvalue;\n-    } else {\n-        billvalue = (20/100)*billvalue;\n-    }\n+    billvalue >= 50 && billvalue <= 30 ? billvalue*0.15 : billvalue*0.2;\n }\n \n const checktip = calctip(100);\n console.log(checktip);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1645385041479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,6 +107,7 @@\n const calctip = billvalue => {\n     billvalue >= 50 && billvalue <= 30 ? billvalue*0.15 : billvalue*0.2;\n }\n \n-const checktip = calctip(100);\n-console.log(checktip);\n\\ No newline at end of file\n+const bills = [125,555,44];\n+const tips = [calctip(bills[0]),calctip(bills[1]),calctip(bills[2])]\n+console.log(tips);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1645385070893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,5 +109,5 @@\n }\n \n const bills = [125,555,44];\n const tips = [calctip(bills[0]),calctip(bills[1]),calctip(bills[2])]\n-console.log(tips);\n\\ No newline at end of file\n+console.log(bills, tips);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1645385101944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,11 +103,10 @@\n // checkWinner(dolpscore, koascore);\n \n //arrays\n \n-const calctip = billvalue => {\n+const calctip = billvalue => \n     billvalue >= 50 && billvalue <= 30 ? billvalue*0.15 : billvalue*0.2;\n-}\n \n const bills = [125,555,44];\n const tips = [calctip(bills[0]),calctip(bills[1]),calctip(bills[2])]\n console.log(bills, tips);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1645385137401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \n //arrays\n \n const calctip = billvalue => \n-    billvalue >= 50 && billvalue <= 30 ? billvalue*0.15 : billvalue*0.2;\n+    billvalue >= 50 && billvalue <= 300 ? billvalue*0.15 : billvalue*0.2;\n \n const bills = [125,555,44];\n const tips = [calctip(bills[0]),calctip(bills[1]),calctip(bills[2])]\n console.log(bills, tips);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650971680903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,10 +103,22 @@\n // checkWinner(dolpscore, koascore);\n \n //arrays\n \n-const calctip = billvalue => \n-    billvalue >= 50 && billvalue <= 300 ? billvalue*0.15 : billvalue*0.2;\n+// const calctip = billvalue => \n+//     billvalue >= 50 && billvalue <= 300 ? billvalue*0.15 : billvalue*0.2;\n \n-const bills = [125,555,44];\n\\ No newline at end of file\n-const tips = [calctip(bills[0]),calctip(bills[1]),calctip(bills[2])]\n-console.log(bills, tips);\n+// const bills = [125,555,44];\n+// const tips = [calctip(bills[0]),calctip(bills[1]),calctip(bills[2])]\n+// console.log(bills, tips);\n+\n+// RETRIEVE DATA IN OBJECTS AND CHANGE DATA IN OBJECTS USING DOT AND BRACKET ANNOTATIONS\n+\n+const jonas = {\n+    firstName: 'David',\n+    lastName: 'Schitt',\n+    age: 2037 - 1991,\n+    job: 'Teacher',\n+    friends: ['Peter','Alexis','Mary']\n+}\n+\n+console.log(jonas);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650971853058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -119,6 +119,6 @@\n     age: 2037 - 1991,\n     job: 'Teacher',\n     friends: ['Peter','Alexis','Mary']\n }\n-\n-console.log(jonas);\n\\ No newline at end of file\n+console.log(jonas);\n+console.log(jonas.friends[2]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650973418195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -120,5 +120,13 @@\n     job: 'Teacher',\n     friends: ['Peter','Alexis','Mary']\n }\n console.log(jonas);\n-console.log(jonas.friends[2]);\n\\ No newline at end of file\n+console.log(jonas.friends[2]);\n+console.log(jonas.lastName); // dot annotation\n+console.log(jonas['lastname']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n+\n+// variable store which have repeating part\n+\n+const nameKey = 'Name';\n+console.log('first' + nameKey);\n+console.log('last' + nameKey);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650973464852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,12 +121,12 @@\n     friends: ['Peter','Alexis','Mary']\n }\n console.log(jonas);\n console.log(jonas.friends[2]);\n-console.log(jonas.lastName); // dot annotation\n-console.log(jonas['lastname']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n+//console.log(jonas.lastName); // dot annotation\n+//console.log(jonas['lastname']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n \n // variable store which have repeating part\n \n const nameKey = 'Name';\n\\ No newline at end of file\n-console.log('first' + nameKey);\n-console.log('last' + nameKey);\n+//console.log('first' + nameKey);\n+//console.log('last' + nameKey);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650973475843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,9 +121,9 @@\n     friends: ['Peter','Alexis','Mary']\n }\n console.log(jonas);\n console.log(jonas.friends[2]);\n-//console.log(jonas.lastName); // dot annotation\n+console.log(jonas.lastName); // dot annotation\n //console.log(jonas['lastname']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n \n // variable store which have repeating part\n \n"
+                },
+                {
+                    "date": 1650973482236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,9 +122,9 @@\n }\n console.log(jonas);\n console.log(jonas.friends[2]);\n console.log(jonas.lastName); // dot annotation\n-//console.log(jonas['lastname']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n+console.log(jonas['lastname']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n \n // variable store which have repeating part\n \n const nameKey = 'Name';\n"
+                },
+                {
+                    "date": 1650973506424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,9 +122,9 @@\n }\n console.log(jonas);\n console.log(jonas.friends[2]);\n console.log(jonas.lastName); // dot annotation\n-console.log(jonas['lastname']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n+console.log(jonas['lastName']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n \n // variable store which have repeating part\n \n const nameKey = 'Name';\n"
+                },
+                {
+                    "date": 1650973515380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,6 +127,6 @@\n \n // variable store which have repeating part\n \n const nameKey = 'Name';\n-//console.log('first' + nameKey);\n-//console.log('last' + nameKey);\n\\ No newline at end of file\n+console.log('first' + nameKey);\n+console.log('last' + nameKey);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650973551017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,6 +127,6 @@\n \n // variable store which have repeating part\n \n const nameKey = 'Name';\n-console.log('first' + nameKey);\n-console.log('last' + nameKey);\n\\ No newline at end of file\n+console.log(jonas['first' + nameKey]);\n+console.log(jonas['last' + nameKey]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650973901386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,6 +127,10 @@\n \n // variable store which have repeating part\n \n const nameKey = 'Name';\n-console.log(jonas['first' + nameKey]);\n-console.log(jonas['last' + nameKey]);\n\\ No newline at end of file\n+console.log(jonas['first' + nameKey]);  // js will the [] expression and it will become 'firstName' and then it will see jonas with firstName property\n+console.log(jonas['last' + nameKey]);\n+\n+// When we need to compute the property name we use bracket annotation\n+\n+const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650973920954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -132,5 +132,6 @@\n console.log(jonas['last' + nameKey]);\n \n // When we need to compute the property name we use bracket annotation\n \n-const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n\\ No newline at end of file\n+const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n+console.log(interestedIn);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650973935382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -133,5 +133,5 @@\n \n // When we need to compute the property name we use bracket annotation\n \n const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n-console.log(interestedIn);\n\\ No newline at end of file\n+console.log(jonas[interestedIn]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650974083864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -133,5 +133,10 @@\n \n // When we need to compute the property name we use bracket annotation\n \n const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n-console.log(jonas[interestedIn]);\n\\ No newline at end of file\n+\n+if(jonas[interestedIn]) {\n+console.log(jonas[interestedIn]);\n+} else {\n+    console.log(\"Oops. Wrong request!\");\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650974173791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,5 +138,8 @@\n if(jonas[interestedIn]) {\n console.log(jonas[interestedIn]);\n } else {\n     console.log(\"Oops. Wrong request!\");\n-}\n\\ No newline at end of file\n+}\n+\n+// ADD NEW PROPERTIES TO THE OBJECT\n+jonas.location = 'Paris';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650974236506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -141,5 +141,6 @@\n     console.log(\"Oops. Wrong request!\");\n }\n \n // ADD NEW PROPERTIES TO THE OBJECT\n-jonas.location = 'Paris';\n\\ No newline at end of file\n+jonas.location = 'Paris';\n+jonas['twitter'] = '@davidschitt'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650974255032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -142,5 +142,7 @@\n }\n \n // ADD NEW PROPERTIES TO THE OBJECT\n jonas.location = 'Paris';\n-jonas['twitter'] = '@davidschitt'\n\\ No newline at end of file\n+jonas['twitter'] = '@davidschitt'\n+\n+console.log(jonas);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650974486940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -144,5 +144,9 @@\n // ADD NEW PROPERTIES TO THE OBJECT\n jonas.location = 'Paris';\n jonas['twitter'] = '@davidschitt'\n \n-console.log(jonas);\n\\ No newline at end of file\n+console.log(jonas);\n+\n+//Challenge:- dynamic 'Jonas has 3 friends. But his best friend is michael'\n+\n+console.log(jonas.firstName +'has '+ jonas.friends.length + 'friends. But his best friend is' +  jonas.friends[1]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650974495699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -132,15 +132,15 @@\n console.log(jonas['last' + nameKey]);\n \n // When we need to compute the property name we use bracket annotation\n \n-const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n+// const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n \n-if(jonas[interestedIn]) {\n-console.log(jonas[interestedIn]);\n-} else {\n-    console.log(\"Oops. Wrong request!\");\n-}\n+// if(jonas[interestedIn]) {\n+// console.log(jonas[interestedIn]);\n+// } else {\n+//     console.log(\"Oops. Wrong request!\");\n+// }\n \n // ADD NEW PROPERTIES TO THE OBJECT\n jonas.location = 'Paris';\n jonas['twitter'] = '@davidschitt'\n"
+                },
+                {
+                    "date": 1650974519521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,5 +148,5 @@\n console.log(jonas);\n \n //Challenge:- dynamic 'Jonas has 3 friends. But his best friend is michael'\n \n-console.log(jonas.firstName +'has '+ jonas.friends.length + 'friends. But his best friend is' +  jonas.friends[1]);\n\\ No newline at end of file\n+console.log(jonas.firstName + ' has '+ jonas.friends.length + ' friends. But his best friend is ' +  jonas.friends[1]);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650974659347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,5 +148,6 @@\n console.log(jonas);\n \n //Challenge:- dynamic 'Jonas has 3 friends. But his best friend is michael'\n \n-console.log(jonas.firstName + ' has '+ jonas.friends.length + ' friends. But his best friend is ' +  jonas.friends[1]);\n\\ No newline at end of file\n+console.log(jonas.firstName + ' has '+ jonas.friends.length + ' friends. But his best friend is ' +  jonas.friends[1]); //or\n+console.log(`${jonas.firstName} has ${jonas.friends.length} friends. But his best friend is ${jonas.friends[1]}`);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650976501514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,42 +112,59 @@\n // console.log(bills, tips);\n \n // RETRIEVE DATA IN OBJECTS AND CHANGE DATA IN OBJECTS USING DOT AND BRACKET ANNOTATIONS\n \n-const jonas = {\n-    firstName: 'David',\n-    lastName: 'Schitt',\n-    age: 2037 - 1991,\n-    job: 'Teacher',\n-    friends: ['Peter','Alexis','Mary']\n-}\n-console.log(jonas);\n-console.log(jonas.friends[2]);\n-console.log(jonas.lastName); // dot annotation\n-console.log(jonas['lastName']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n+// const jonas = {\n+//     firstName: 'David',\n+//     lastName: 'Schitt',\n+//     age: 2037 - 1991,\n+//     job: 'Teacher',\n+//     friends: ['Peter','Alexis','Mary']\n+// }\n+// console.log(jonas);\n+// console.log(jonas.friends[2]);\n+// console.log(jonas.lastName); // dot annotation\n+// console.log(jonas['lastName']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n \n-// variable store which have repeating part\n+// // variable store which have repeating part\n \n-const nameKey = 'Name';\n-console.log(jonas['first' + nameKey]);  // js will the [] expression and it will become 'firstName' and then it will see jonas with firstName property\n-console.log(jonas['last' + nameKey]);\n+// const nameKey = 'Name';\n+// console.log(jonas['first' + nameKey]);  // js will the [] expression and it will become 'firstName' and then it will see jonas with firstName property\n+// console.log(jonas['last' + nameKey]);\n \n-// When we need to compute the property name we use bracket annotation\n+// // When we need to compute the property name we use bracket annotation\n \n-// const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n+// // const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n\\ No newline at end of file\n \n-// if(jonas[interestedIn]) {\n-// console.log(jonas[interestedIn]);\n-// } else {\n-//     console.log(\"Oops. Wrong request!\");\n-// }\n+// // if(jonas[interestedIn]) {\n+// // console.log(jonas[interestedIn]);\n+// // } else {\n+// //     console.log(\"Oops. Wrong request!\");\n+// // }\n \n-// ADD NEW PROPERTIES TO THE OBJECT\n-jonas.location = 'Paris';\n-jonas['twitter'] = '@davidschitt'\n+// // ADD NEW PROPERTIES TO THE OBJECT\n+// jonas.location = 'Paris';\n+// jonas['twitter'] = '@davidschitt'\n \n-console.log(jonas);\n+// console.log(jonas);\n \n-//Challenge:- dynamic 'Jonas has 3 friends. But his best friend is michael'\n+// //Challenge:- dynamic 'Jonas has 3 friends. But his best friend is michael'\n \n-console.log(jonas.firstName + ' has '+ jonas.friends.length + ' friends. But his best friend is ' +  jonas.friends[1]); //or\n-console.log(`${jonas.firstName} has ${jonas.friends.length} friends. But his best friend is ${jonas.friends[1]}`);\n+// console.log(jonas.firstName + ' has '+ jonas.friends.length + ' friends. But his best friend is ' +  jonas.friends[1]); //or\n+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends. But his best friend is ${jonas.friends[1]}`);\n+\n+//Object Methods\n+\n+const jonas = {\n+    firstName: 'David',\n+    lastName: 'Schitt',\n+    birthyear : 1991,\n+    job: 'Teacher',\n+    friends: ['Peter','Alexis','Mary'],\n+    hasDriverLicense: true,\n+\n+    calcAge: function(birthyear) {\n+        return 2037 - birthyear;\n+    }\n+}\n+\n+console.log(jonas.calcAge(1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650976560533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,5 +166,6 @@\n         return 2037 - birthyear;\n     }\n }\n \n-console.log(jonas.calcAge(1991));\n\\ No newline at end of file\n+console.log(jonas.calcAge(1991));\n+console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650979971410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -162,10 +162,11 @@\n     friends: ['Peter','Alexis','Mary'],\n     hasDriverLicense: true,\n \n     calcAge: function(birthyear) {\n-        return 2037 - birthyear;\n+        console.log(this);\n+        return 2037 - this.birthyear;\n     }\n }\n \n\\ No newline at end of file\n-console.log(jonas.calcAge(1991));\n-console.log(jonas['calcAge'](1991));\n+console.log(jonas.calcAge());\n+//console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650980035723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,8 +164,13 @@\n \n     calcAge: function(birthyear) {\n         console.log(this);\n         return 2037 - this.birthyear;\n+    },\n+    shit: {\n+        fuckFunction: () => {\n+            console.log(`fuck ${this}`)\n+        }\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1650980078272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,12 +166,11 @@\n         console.log(this);\n         return 2037 - this.birthyear;\n     },\n     shit: {\n-        fuckFunction: () => {\n-            console.log(`fuck ${this}`)\n-        }\n+        fuckFunction: () => (`fuck ${this}`)\n     }\n }\n \n console.log(jonas.calcAge());\n+console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650980117608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,9 @@\n         console.log(this);\n         return 2037 - this.birthyear;\n     },\n     shit: {\n-        fuckFunction: () => (`fuck ${this}`)\n+        fuckFunction: () => {(`fuck ${this}`)}\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1650980128630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,9 @@\n         console.log(this);\n         return 2037 - this.birthyear;\n     },\n     shit: {\n-        fuckFunction: () => {(`fuck ${this}`)}\n+        fuckFunction: () => {return (`fuck ${this}`)}\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1650980156391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,9 @@\n         console.log(this);\n         return 2037 - this.birthyear;\n     },\n     shit: {\n-        fuckFunction: () => {return (`fuck ${this}`)}\n+        tatti: {fuckFunction: () => {return (`fuck ${this}`)}}\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1650980164500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -171,6 +171,6 @@\n     }\n }\n \n console.log(jonas.calcAge());\n-console.log(jonas.shit.fuckFunction());\n+console.log(jonas.shit.tatti.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1650980183072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,9 @@\n         console.log(this);\n         return 2037 - this.birthyear;\n     },\n     shit: {\n-        tatti: {fuckFunction: () => {return (`fuck ${this}`)}}\n+        tatti: {fuckFunction: function () => {return (`fuck ${this}`)}}\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1650980225055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,9 @@\n         console.log(this);\n         return 2037 - this.birthyear;\n     },\n     shit: {\n-        tatti: {fuckFunction: function () => {return (`fuck ${this}`)}}\n+        tatti: {x: ,fuckFunction: function (){return (`fuck ${this}`)}}\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1650980236896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,9 @@\n         console.log(this);\n         return 2037 - this.birthyear;\n     },\n     shit: {\n-        tatti: {x: ,fuckFunction: function (){return (`fuck ${this}`)}}\n+        tatti: {x: 'poop',fuckFunction: function (){return (`fuck ${this.}`)}}\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1650980252440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,10 @@\n         console.log(this);\n         return 2037 - this.birthyear;\n     },\n     shit: {\n-        tatti: {x: 'poop',fuckFunction: function (){return (`fuck ${this.}`)}}\n+        x: 'poop',\n+        tatti: {x: 'poop',fuckFunction: function (){return (`fuck ${this.x}`)}}\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1650980344898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,10 +166,10 @@\n         console.log(this);\n         return 2037 - this.birthyear;\n     },\n     shit: {\n-        x: 'poop',\n-        tatti: {x: 'poop',fuckFunction: function (){return (`fuck ${this.x}`)}}\n+        x: 'asdasdasd',\n+        fuckFunction: function (){return (`fuck ${this.x}`)}}\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1650980352724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,11 +167,11 @@\n         return 2037 - this.birthyear;\n     },\n     shit: {\n         x: 'asdasdasd',\n-        fuckFunction: function (){return (`fuck ${this.x}`)}}\n+        fuckFunction: function (){return (`fuck ${this.x}`)}\n     }\n }\n \n console.log(jonas.calcAge());\n-console.log(jonas.shit.tatti.fuckFunction());\n+console.log(jonas.shit.tti.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651057785665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -172,6 +172,6 @@\n     }\n }\n \n console.log(jonas.calcAge());\n-console.log(jonas.shit.tti.fuckFunction());\n+//console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058141845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,16 +161,16 @@\n     job: 'Teacher',\n     friends: ['Peter','Alexis','Mary'],\n     hasDriverLicense: true,\n \n-    calcAge: function(birthyear) {\n-        console.log(this);\n-        return 2037 - this.birthyear;\n-    },\n-    shit: {\n-        x: 'asdasdasd',\n-        fuckFunction: function (){return (`fuck ${this.x}`)}\n-    }\n+    // calcAge: function(birthyear) {\n+    //     console.log(this);\n+    //     return 2037 - this.birthyear;\n+    // },\n+    // shit: {\n+    //     x: 'asdasdasd',\n+    //     fuckFunction: function (){return (`fuck ${this.x}`)}\n+    // }\n }\n \n console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n"
+                },
+                {
+                    "date": 1651058147805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,8 +169,9 @@\n     // shit: {\n     //     x: 'asdasdasd',\n     //     fuckFunction: function (){return (`fuck ${this.x}`)}\n     // }\n+    calcAge\n }\n \n console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n"
+                },
+                {
+                    "date": 1651058154144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,9 +169,9 @@\n     // shit: {\n     //     x: 'asdasdasd',\n     //     fuckFunction: function (){return (`fuck ${this.x}`)}\n     // }\n-    calcAge\n+    calcAge: function()\n }\n \n console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n"
+                },
+                {
+                    "date": 1651058159442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,9 +169,9 @@\n     // shit: {\n     //     x: 'asdasdasd',\n     //     fuckFunction: function (){return (`fuck ${this.x}`)}\n     // }\n-    calcAge: function()\n+    calcAge: function(birthyear)\n }\n \n console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n"
+                },
+                {
+                    "date": 1651058166295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,9 +169,11 @@\n     // shit: {\n     //     x: 'asdasdasd',\n     //     fuckFunction: function (){return (`fuck ${this.x}`)}\n     // }\n-    calcAge: function(birthyear)\n+    calcAge: function(birthyear) {\n+        this.age = \n+    }\n }\n \n console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n"
+                },
+                {
+                    "date": 1651058172122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -170,9 +170,9 @@\n     //     x: 'asdasdasd',\n     //     fuckFunction: function (){return (`fuck ${this.x}`)}\n     // }\n     calcAge: function(birthyear) {\n-        this.age = \n+        this.age = 2037 - this.birthyear;\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1651058183729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -171,8 +171,9 @@\n     //     fuckFunction: function (){return (`fuck ${this.x}`)}\n     // }\n     calcAge: function(birthyear) {\n         this.age = 2037 - this.birthyear;\n+        return this.age;\n     }\n }\n \n console.log(jonas.calcAge());\n"
+                },
+                {
+                    "date": 1651058190978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -175,7 +175,7 @@\n         return this.age;\n     }\n }\n \n-console.log(jonas.calcAge());\n+//console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058197264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,8 +174,8 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     }\n }\n-\n+console.log(jonas.calcAge());\n //console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058202488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,8 +174,8 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     }\n }\n-console.log(jonas.calcAge());\n+console.log(jonas.ag);\n //console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058223523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,13 +169,13 @@\n     // shit: {\n     //     x: 'asdasdasd',\n     //     fuckFunction: function (){return (`fuck ${this.x}`)}\n     // }\n-    calcAge: function(birthyear) {\n+    calcAge: function() {\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     }\n }\n-console.log(jonas.ag);\n+console.log(jonas.age);\n //console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058408125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -175,7 +175,7 @@\n         return this.age;\n     }\n }\n console.log(jonas.age);\n-//console.log(jonas.calcAge());\n+console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058414931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,8 +174,8 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     }\n }\n+console.log(jonas.calcAge());\n console.log(jonas.age);\n-console.log(jonas.calcAge());\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058534023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -177,5 +177,7 @@\n }\n console.log(jonas.calcAge());\n console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n-//console.log(jonas['calcAge'](1991));\n\\ No newline at end of file\n+//console.log(jonas['calcAge'](1991));\n+\n+//Challenge\n"
+                },
+                {
+                    "date": 1651058545263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -180,4 +180,5 @@\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n+if(this.a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058552177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -180,5 +180,5 @@\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n-if(this.a)\n\\ No newline at end of file\n+if(this.age >= 18)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058567160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -180,5 +180,7 @@\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n-if(this.age >= 18)\n\\ No newline at end of file\n+if(this.age >= 18) {\n+    console.log()\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058574658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,6 +181,6 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log()\n+    console.log(`${}`)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058583197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,6 +181,6 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log(`${}`)\n+    console.log(`${firstName} is a `)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058593632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,6 +181,6 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log(`${firstName} is a `)\n+    console.log(`${firstName} is a ${this.age}y`)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058602625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,6 +181,6 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log(`${firstName} is a ${this.age}y`)\n+    console.log(`${firstName} is a ${this.age}-year oldteaher`)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058610348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,6 +181,6 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log(`${firstName} is a ${this.age}-year oldteaher`)\n+    console.log(`${firstName} is a ${this.age}-year old teacher.`)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058617166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,6 +181,6 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log(`${firstName} is a ${this.age}-year old teacher.`)\n+    console.log(`${firstName} is a ${this.age}-year old teacher, and he also has `)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058626125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,6 +181,6 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log(`${firstName} is a ${this.age}-year old teacher, and he also has `)\n+    console.log(`${firstName} is a ${this.age}-year old teacher, and he also has a driver's license.`)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1651058632923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,6 +181,8 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log(`${firstName} is a ${this.age}-year old teacher, and he also has a driver's license.`)\n-}\n\\ No newline at end of file\n+    console.log(`${firstName} is a ${this.age}-year old teacher, and he also has a driver's license.`);\n+} else {\n+    \n+}\n"
+                },
+                {
+                    "date": 1651058641454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -183,6 +183,6 @@\n //Challenge\n if(this.age >= 18) {\n     console.log(`${firstName} is a ${this.age}-year old teacher, and he also has a driver's license.`);\n } else {\n-    \n+    console.log(`${firstName} is a ${this.age}-year old teacher, and he also has a driver's license.`);\n }\n"
+                },
+                {
+                    "date": 1651058651120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,8 +181,8 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log(`${firstName} is a ${this.age}-year old teacher, and he also has a driver's license.`);\n+    console.log(`${firstName} is a ${this.age}-year old teacher, and he has a driver's license.`);\n } else {\n     console.log(`${firstName} is a ${this.age}-year old teacher, and he also has a driver's license.`);\n }\n"
+                },
+                {
+                    "date": 1651058657361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -183,6 +183,6 @@\n //Challenge\n if(this.age >= 18) {\n     console.log(`${firstName} is a ${this.age}-year old teacher, and he has a driver's license.`);\n } else {\n-    console.log(`${firstName} is a ${this.age}-year old teacher, and he also has a driver's license.`);\n+    console.log(`${firstName} is a ${this.age}-year old teacher, and he has no driver's license.`);\n }\n"
+                },
+                {
+                    "date": 1651058685186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,8 +181,8 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log(`${firstName} is a ${this.age}-year old teacher, and he has a driver's license.`);\n+    console.log(`${jonas.firstName} is a ${this.age}-year old teacher, and he has a driver's license.`);\n } else {\n     console.log(`${firstName} is a ${this.age}-year old teacher, and he has no driver's license.`);\n }\n"
+                },
+                {
+                    "date": 1651058695019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,8 +181,8 @@\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n-    console.log(`${jonas.firstName} is a ${this.age}-year old teacher, and he has a driver's license.`);\n+    console.log(`${jonas.firstName} is a ${jonas.age}-year old teacher, and he has a driver's license.`);\n } else {\n-    console.log(`${firstName} is a ${this.age}-year old teacher, and he has no driver's license.`);\n+    console.log(`${jonas.firstName} is a ${this.age}-year old teacher, and he has no driver's license.`);\n }\n"
+                },
+                {
+                    "date": 1651058710426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,15 +174,15 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     }\n }\n-console.log(jonas.calcAge());\n-console.log(jonas.age);\n+// console.log(jonas.calcAge());\n+// console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n if(this.age >= 18) {\n     console.log(`${jonas.firstName} is a ${jonas.age}-year old teacher, and he has a driver's license.`);\n } else {\n-    console.log(`${jonas.firstName} is a ${this.age}-year old teacher, and he has no driver's license.`);\n+    console.log(`${jonas.firstName} is a ${jonas.age}-year old teacher, and he has no driver's license.`);\n }\n"
+                },
+                {
+                    "date": 1651058729905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,9 +174,9 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     }\n }\n-// console.log(jonas.calcAge());\n+console.log(jonas.calcAge());\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n"
+                },
+                {
+                    "date": 1651058736260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,9 +174,9 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     }\n }\n-console.log(jonas.calcAge());\n+jonas.\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n"
+                },
+                {
+                    "date": 1651058756053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,15 +174,15 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     }\n }\n-jonas.\n+jonas.calcAge();\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n-if(this.age >= 18) {\n+if(jonas.age >= 18) {\n     console.log(`${jonas.firstName} is a ${jonas.age}-year old teacher, and he has a driver's license.`);\n } else {\n     console.log(`${jonas.firstName} is a ${jonas.age}-year old teacher, and he has no driver's license.`);\n }\n"
+                },
+                {
+                    "date": 1651058895624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -172,9 +172,10 @@\n     // }\n     calcAge: function() {\n         this.age = 2037 - this.birthyear;\n         return this.age;\n-    }\n+    },\n+    \n }\n jonas.calcAge();\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n"
+                },
+                {
+                    "date": 1651058904285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,9 +173,9 @@\n     calcAge: function() {\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     },\n-    \n+    getSummary: function()\n }\n jonas.calcAge();\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n"
+                },
+                {
+                    "date": 1651058913090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,11 +173,14 @@\n     calcAge: function() {\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     },\n-    getSummary: function()\n+    getSummary: function() {\n+\n+    }\n }\n jonas.calcAge();\n+jonas.calcAge();\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n"
+                },
+                {
+                    "date": 1651058921606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -178,9 +178,9 @@\n \n     }\n }\n jonas.calcAge();\n-jonas.calcAge();\n+jonas.getSummary();\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n"
+                },
+                {
+                    "date": 1651058987254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,9 +174,9 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     },\n     getSummary: function() {\n-\n+        return \n     }\n }\n jonas.calcAge();\n jonas.getSummary();\n"
+                },
+                {
+                    "date": 1651059002154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,9 +174,9 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     },\n     getSummary: function() {\n-        return \n+        return `${jonas.firstName} is a ${jonas.age}-year old teacher, and he has a driver's license.`\n     }\n }\n jonas.calcAge();\n jonas.getSummary();\n"
+                },
+                {
+                    "date": 1651059010550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,9 +174,9 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     },\n     getSummary: function() {\n-        return `${jonas.firstName} is a ${jonas.age}-year old teacher, and he has a driver's license.`\n+        return `${this.firstName} is a ${this}-year old teacher, and he has a driver's license.`\n     }\n }\n jonas.calcAge();\n jonas.getSummary();\n"
+                },
+                {
+                    "date": 1651059068428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,9 +174,9 @@\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     },\n     getSummary: function() {\n-        return `${this.firstName} is a ${this}-year old teacher, and he has a driver's license.`\n+        return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has a driver's license.`\n     }\n }\n jonas.calcAge();\n jonas.getSummary();\n@@ -184,9 +184,5 @@\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n //Challenge\n-if(jonas.age >= 18) {\n-    console.log(`${jonas.firstName} is a ${jonas.age}-year old teacher, and he has a driver's license.`);\n-} else {\n-    console.log(`${jonas.firstName} is a ${jonas.age}-year old teacher, and he has no driver's license.`);\n-}\n+\n"
+                },
+                {
+                    "date": 1651059075693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,8 +173,9 @@\n     calcAge: function() {\n         this.age = 2037 - this.birthyear;\n         return this.age;\n     },\n+    //Challenge\n     getSummary: function() {\n         return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has a driver's license.`\n     }\n }\n@@ -183,6 +184,4 @@\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n-//Challenge\n-\n"
+                },
+                {
+                    "date": 1651059087151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -175,9 +175,9 @@\n         return this.age;\n     },\n     //Challenge\n     getSummary: function() {\n-        return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has a driver's license.`\n+        return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${} driver's license.`\n     }\n }\n jonas.calcAge();\n jonas.getSummary();\n"
+                },
+                {
+                    "date": 1651059099232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -175,9 +175,9 @@\n         return this.age;\n     },\n     //Challenge\n     getSummary: function() {\n-        return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${} driver's license.`\n+        return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense } driver's license.`\n     }\n }\n jonas.calcAge();\n jonas.getSummary();\n"
+                },
+                {
+                    "date": 1651059104539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -175,9 +175,9 @@\n         return this.age;\n     },\n     //Challenge\n     getSummary: function() {\n-        return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense } driver's license.`\n+        return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense ? 'a'} driver's license.`\n     }\n }\n jonas.calcAge();\n jonas.getSummary();\n"
+                },
+                {
+                    "date": 1651059111556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -175,9 +175,9 @@\n         return this.age;\n     },\n     //Challenge\n     getSummary: function() {\n-        return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense ? 'a'} driver's license.`\n+        return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`\n     }\n }\n jonas.calcAge();\n jonas.getSummary();\n"
+                },
+                {
+                    "date": 1651059128563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,9 +179,9 @@\n         return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`\n     }\n }\n jonas.calcAge();\n-jonas.getSummary();\n+console.lojonas.getSummary();\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n"
+                },
+                {
+                    "date": 1651059134867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,9 +179,9 @@\n         return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`\n     }\n }\n jonas.calcAge();\n-console.lojonas.getSummary();\n+console.log(jonas.getSummary());\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n"
+                },
+                {
+                    "date": 1651059375981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -153,15 +153,15 @@\n // console.log(`${jonas.firstName} has ${jonas.friends.length} friends. But his best friend is ${jonas.friends[1]}`);\n \n //Object Methods\n \n-const jonas = {\n-    firstName: 'David',\n-    lastName: 'Schitt',\n-    birthyear : 1991,\n-    job: 'Teacher',\n-    friends: ['Peter','Alexis','Mary'],\n-    hasDriverLicense: true,\n+// const jonas = {\n+//     firstName: 'David',\n+//     lastName: 'Schitt',\n+//     birthyear : 1991,\n+//     job: 'Teacher',\n+//     friends: ['Peter','Alexis','Mary'],\n+//     hasDriverLicense: true,\n \n     // calcAge: function(birthyear) {\n     //     console.log(this);\n     //     return 2037 - this.birthyear;\n"
+                },
+                {
+                    "date": 1651059382727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,16 +169,16 @@\n     // shit: {\n     //     x: 'asdasdasd',\n     //     fuckFunction: function (){return (`fuck ${this.x}`)}\n     // }\n-    calcAge: function() {\n-        this.age = 2037 - this.birthyear;\n-        return this.age;\n-    },\n+    // calcAge: function() {\n+    //     this.age = 2037 - this.birthyear;\n+    //     return this.age;\n+    // },\n     //Challenge\n-    getSummary: function() {\n-        return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`\n-    }\n+    // getSummary: function() {\n+    //     return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`\n+    // }\n }\n jonas.calcAge();\n console.log(jonas.getSummary());\n // console.log(jonas.age);\n"
+                },
+                {
+                    "date": 1651059399001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -177,11 +177,14 @@\n     //Challenge\n     // getSummary: function() {\n     //     return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`\n     // }\n-}\n-jonas.calcAge();\n-console.log(jonas.getSummary());\n+// }\n+// jonas.calcAge();\n+// console.log(jonas.getSummary());\n // console.log(jonas.age);\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n+//CHALLENGE\n+\n+\n"
+                },
+                {
+                    "date": 1651059406636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -185,6 +185,6 @@\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n //CHALLENGE\n+const \n \n-\n"
+                },
+                {
+                    "date": 1651059413563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -185,6 +185,8 @@\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n //CHALLENGE\n-const \n+const mark = {\n+    \n+}\n \n"
+                },
+                {
+                    "date": 1651059420440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -186,7 +186,7 @@\n //console.log(jonas['calcAge'](1991));\n \n //CHALLENGE\n const mark = {\n-    \n+    firstName: 'Mark'\n }\n \n"
+                },
+                {
+                    "date": 1651059425644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -186,7 +186,8 @@\n //console.log(jonas['calcAge'](1991));\n \n //CHALLENGE\n const mark = {\n-    firstName: 'Mark'\n+    firstName: 'Mark',\n+    lastName: ''\n }\n \n"
+                },
+                {
+                    "date": 1651059437910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -187,7 +187,8 @@\n \n //CHALLENGE\n const mark = {\n     firstName: 'Mark',\n-    lastName: ''\n+    lastName: 'Miller',\n+    mass:\n }\n \n"
+                },
+                {
+                    "date": 1651059447725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -188,7 +188,7 @@\n //CHALLENGE\n const mark = {\n     firstName: 'Mark',\n     lastName: 'Miller',\n-    mass:\n+    mass:78\n }\n \n"
+                },
+                {
+                    "date": 1651059460951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -188,7 +188,8 @@\n //CHALLENGE\n const mark = {\n     firstName: 'Mark',\n     lastName: 'Miller',\n-    mass:78\n+    mass: 78,\n+    height: 1.\n }\n \n"
+                },
+                {
+                    "date": 1651059484781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -189,7 +189,8 @@\n const mark = {\n     firstName: 'Mark',\n     lastName: 'Miller',\n     mass: 78,\n-    height: 1.\n+    height: 1.69,\n+    \n }\n \n"
+                },
+                {
+                    "date": 1651059491379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -190,7 +190,8 @@\n     firstName: 'Mark',\n     lastName: 'Miller',\n     mass: 78,\n     height: 1.69,\n-    \n+\n+    calcBMI\n }\n \n"
+                },
+                {
+                    "date": 1651059518532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -191,7 +191,9 @@\n     lastName: 'Miller',\n     mass: 78,\n     height: 1.69,\n \n-    calcBMI\n+    calcBMI: function() {\n+        this.bmi = \n+    }\n }\n \n"
+                },
+                {
+                    "date": 1651059528446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,8 @@\n     mass: 78,\n     height: 1.69,\n \n     calcBMI: function() {\n-        this.bmi = \n+        this.bmi = this.mass\n     }\n }\n \n"
+                },
+                {
+                    "date": 1651059534773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,8 @@\n     mass: 78,\n     height: 1.69,\n \n     calcBMI: function() {\n-        this.bmi = this.mass\n+        this.bmi = this.mass/\n     }\n }\n \n"
+                },
+                {
+                    "date": 1651059540442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,8 @@\n     mass: 78,\n     height: 1.69,\n \n     calcBMI: function() {\n-        this.bmi = this.mass/\n+        this.bmi = this.mass/this.height\n     }\n }\n \n"
+                },
+                {
+                    "date": 1651059550380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,8 @@\n     mass: 78,\n     height: 1.69,\n \n     calcBMI: function() {\n-        this.bmi = this.mass/this.height\n+        this.bmi = this.mass/this.height ** 2\n     }\n }\n \n"
+                },
+                {
+                    "date": 1651059556357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,9 @@\n     mass: 78,\n     height: 1.69,\n \n     calcBMI: function() {\n-        this.bmi = this.mass/this.height ** 2\n+        this.bmi = this.mass/this.height ** 2;\n+        return \n     }\n }\n \n"
+                },
+                {
+                    "date": 1651059563909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -193,8 +193,8 @@\n     height: 1.69,\n \n     calcBMI: function() {\n         this.bmi = this.mass/this.height ** 2;\n-        return \n+        return this.bmi;\n     }\n }\n \n"
+                },
+                {
+                    "date": 1651059570347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -195,6 +195,8 @@\n     calcBMI: function() {\n         this.bmi = this.mass/this.height ** 2;\n         return this.bmi;\n     }\n-}\n+},\n \n+\n+\n"
+                },
+                {
+                    "date": 1651059577734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -195,8 +195,18 @@\n     calcBMI: function() {\n         this.bmi = this.mass/this.height ** 2;\n         return this.bmi;\n     }\n-},\n+}\n \n+const mark = {\n+    firstName: 'Mark',\n+    lastName: 'Miller',\n+    mass: 78,\n+    height: 1.69,\n \n+    calcBMI: function() {\n+        this.bmi = this.mass/this.height ** 2;\n+        return this.bmi;\n+    }\n+}\n \n"
+                },
+                {
+                    "date": 1651059585283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -197,9 +197,9 @@\n         return this.bmi;\n     }\n }\n \n-const mark = {\n+const mak = {\n     firstName: 'Mark',\n     lastName: 'Miller',\n     mass: 78,\n     height: 1.69,\n"
+                },
+                {
+                    "date": 1651059593848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -197,10 +197,10 @@\n         return this.bmi;\n     }\n }\n \n-const mak = {\n-    firstName: 'Mark',\n+const john = {\n+    firstName: 'John',\n     lastName: 'Miller',\n     mass: 78,\n     height: 1.69,\n \n"
+                },
+                {
+                    "date": 1651059606763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -199,9 +199,9 @@\n }\n \n const john = {\n     firstName: 'John',\n-    lastName: 'Miller',\n+    lastName: 'Smith',\n     mass: 78,\n     height: 1.69,\n \n     calcBMI: function() {\n"
+                },
+                {
+                    "date": 1651059614626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -200,9 +200,9 @@\n \n const john = {\n     firstName: 'John',\n     lastName: 'Smith',\n-    mass: 78,\n+    mass: 92,\n     height: 1.69,\n \n     calcBMI: function() {\n         this.bmi = this.mass/this.height ** 2;\n"
+                },
+                {
+                    "date": 1651059622487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -201,9 +201,9 @@\n const john = {\n     firstName: 'John',\n     lastName: 'Smith',\n     mass: 92,\n-    height: 1.69,\n+    height: 1.95,\n \n     calcBMI: function() {\n         this.bmi = this.mass/this.height ** 2;\n         return this.bmi;\n"
+                },
+                {
+                    "date": 1651059638477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -209,4 +209,6 @@\n         return this.bmi;\n     }\n }\n \n+\n+\n"
+                },
+                {
+                    "date": 1651059644492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -209,6 +209,7 @@\n         return this.bmi;\n     }\n }\n \n+mark.calcBMI()\n \n \n"
+                },
+                {
+                    "date": 1651059651481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -210,6 +210,6 @@\n     }\n }\n \n mark.calcBMI()\n+john.\n \n-\n"
+                },
+                {
+                    "date": 1651059657536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -210,6 +210,7 @@\n     }\n }\n \n mark.calcBMI()\n-john.\n+john.calcBMI()\n \n+\n"
+                },
+                {
+                    "date": 1651059671251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -212,5 +212,6 @@\n \n mark.calcBMI()\n john.calcBMI()\n \n+if(mark.)\n \n"
+                },
+                {
+                    "date": 1651059677769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -212,6 +212,6 @@\n \n mark.calcBMI()\n john.calcBMI()\n \n-if(mark.)\n+if(mark.bmi > )\n \n"
+                },
+                {
+                    "date": 1651059683926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -212,6 +212,6 @@\n \n mark.calcBMI()\n john.calcBMI()\n \n-if(mark.bmi > )\n+if(mark.bmi > john.bmi)\n \n"
+                },
+                {
+                    "date": 1651059690929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -212,6 +212,6 @@\n \n mark.calcBMI()\n john.calcBMI()\n \n-if(mark.bmi > john.bmi)\n+if(mark.calcBMI() > john.bmi)\n \n"
+                },
+                {
+                    "date": 1651059696955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -212,6 +212,8 @@\n \n mark.calcBMI()\n john.calcBMI()\n \n-if(mark.calcBMI() > john.bmi)\n+if(mark.calcBMI() > john.calcBMI()) {\n+    \n+}\n \n"
+                },
+                {
+                    "date": 1651059702666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    \n+    console.log()\n }\n \n"
+                },
+                {
+                    "date": 1651059708301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log()\n+    console.log(`${}`)\n }\n \n"
+                },
+                {
+                    "date": 1651059726800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${}`)\n+    console.log(`${mark.}`)\n }\n \n"
+                },
+                {
+                    "date": 1651059732368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.}`)\n+    console.log(`${mark.firstName} $`)\n }\n \n"
+                },
+                {
+                    "date": 1651059737817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName} $`)\n+    console.log(`${mark.firstName} ${mark.lastName}`)\n }\n \n"
+                },
+                {
+                    "date": 1651059749036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName} ${mark.lastName}`)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI`)\n }\n \n"
+                },
+                {
+                    "date": 1651059757724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI`)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${}`)\n }\n \n"
+                },
+                {
+                    "date": 1651059764581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${}`)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi}`)\n }\n \n"
+                },
+                {
+                    "date": 1651059776771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi}`)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than John`)\n }\n \n"
+                },
+                {
+                    "date": 1651059784612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than John`)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than $`)\n }\n \n"
+                },
+                {
+                    "date": 1651059791407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than $`)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}`)\n }\n \n"
+                },
+                {
+                    "date": 1651059799913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}`)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s `)\n }\n \n"
+                },
+                {
+                    "date": 1651059814016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s `)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${}`)\n }\n \n"
+                },
+                {
+                    "date": 1651059819830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${}`)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} `)\n }\n \n"
+                },
+                {
+                    "date": 1651059825691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} `)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${}`)\n }\n \n"
+                },
+                {
+                    "date": 1651059831833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${}`)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`)\n }\n \n"
+                },
+                {
+                    "date": 1651059837807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,7 +213,7 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`)\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n }\n \n"
+                },
+                {
+                    "date": 1651059849830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -214,6 +214,8 @@\n john.calcBMI()\n \n if(mark.calcBMI() > john.calcBMI()) {\n     console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n+} else {\n+    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n }\n \n"
+                },
+                {
+                    "date": 1651059858338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -215,7 +215,7 @@\n \n if(mark.calcBMI() > john.calcBMI()) {\n     console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n } else {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n+    console.log(`${john.firstName}'s ${john.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n }\n \n"
+                },
+                {
+                    "date": 1651059865564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -215,7 +215,7 @@\n \n if(mark.calcBMI() > john.calcBMI()) {\n     console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n } else {\n-    console.log(`${john.firstName}'s ${john.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n+    console.log(`${john.firstName}'s ${john.lastName} BMI ${john.bmi} is higher than ${mark.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n }\n \n"
+                },
+                {
+                    "date": 1651059872893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -215,7 +215,7 @@\n \n if(mark.calcBMI() > john.calcBMI()) {\n     console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n } else {\n-    console.log(`${john.firstName}'s ${john.lastName} BMI ${john.bmi} is higher than ${mark.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n+    console.log(`${john.firstName}'s ${john.lastName} BMI ${john.bmi} is higher than ${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi}.`);\n }\n \n"
+                },
+                {
+                    "date": 1651060154789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -212,9 +212,9 @@\n \n mark.calcBMI()\n john.calcBMI()\n \n-if(mark.calcBMI() > john.calcBMI()) {\n+if(mark.bmi > john.calcBMI()) {\n     console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n } else {\n     console.log(`${john.firstName}'s ${john.lastName} BMI ${john.bmi} is higher than ${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi}.`);\n }\n"
+                },
+                {
+                    "date": 1651060167421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -212,10 +212,10 @@\n \n mark.calcBMI()\n john.calcBMI()\n \n-if(mark.bmi > john.calcBMI()) {\n-    console.log(`${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n+if(mark.bmi > john.bmi) {\n+    console.log(`${mark.firstName} ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n } else {\n     console.log(`${john.firstName}'s ${john.lastName} BMI ${john.bmi} is higher than ${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi}.`);\n }\n \n"
+                },
+                {
+                    "date": 1651060173909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,9 +213,9 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.bmi > john.bmi) {\n-    console.log(`${mark.firstName} ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n+    console.log(`${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n } else {\n-    console.log(`${john.firstName}'s ${john.lastName} BMI ${john.bmi} is higher than ${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi}.`);\n+    console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is higher than ${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi}.`);\n }\n \n"
+                },
+                {
+                    "date": 1651060208919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,221 @@\n+// const mMass = 78;\n+// const jMass = 92;\n+// const mHeight = 1.69;\n+// const jHeight = 1.95;\n+// mBMI = mMass / (mHeight * mHeight);\n+// jBMI = jMass / (jHeight * jHeight);\n+// console.log(mBMI);\n+// console.log(jBMI);\n+// //const markHigherBMI;\n+// if (mBMI > jBMI) {\n+//     console.log('Mark');\n+// } else {\n+//     console.log('john');\n+// }\n+// //console.log(markHigherBMI);\n+\n+// const name = 'manvi';\n+// const string1 = `I'm ${name}`;\n+// console.log(string1);\n+\n+// console.log(`Hi\n+//         Hey \n+//         Hola `);\n+\n+// const age = 15;\n+// if (age >= 18) {\n+//     console.log(`Yes 🚕`);\n+// } else {\n+//     const howMuch = 18 - age;\n+//     console.log(`She has to for ${howMuch} years`);\n+// }\n+\n+// let n = '1' + 1; // string + int\n+// n -= 1;\n+// console.log(n); // ans  = 11   // 2+3+4+\"5\" == \"95\"\n+\n+// // string - string = number\n+// // string + number = string\n+// // eg = '10' - '4' - '3' -2 + '5' = 10-4 = 6 -3 =3 -2 = 1 +'5' = 15\n+\n+// // falsy values are not exactly false but it becomes false when we convert into boolena\n+// // 5 falsy values :- 0, \"\", null, undefined, NaN\n+\n+// console.log(Boolean(0));\n+// console.log(Boolean(null));\n+// console.log(Boolean(\"\"));\n+// console.log(Boolean(undefined));\n+// console.log(Boolean(NaN));\n+\n+// console.log(Boolean(2));\n+// console.log(Boolean(`Hiii`));\n+// console.log(Boolean({})); //empty object\n+\n+// const money = 0;\n+// if (money) {\n+//     console.log(\"Dont spent it\");\n+// } else {\n+//     console.log(\"spent it\");\n+// }\n+\n+\n+// const age1 = 18;\n+// if (age === 18) { //strict equality operator doesnot perform type coercion\n+//     console.log(\"hii\"); //true\n+// }\n+\n+// if ('18' == 18) { // loose equality operator , performs type coercion\n+//     console.log(\"hola\"); //true\n+// }\n+\n+// if ('18' === 18) {\n+//     console.log(\"gracias \"); //false\n+// }\n+\n+// const fav = prompt(\"Whats your fav color?\");\n+// console.log(fav);\n+// console.log(typeof fav);\n+\n+// if (fav == 23) { //'23' is a string so thats why we used '==' '23' == 23\n+//     console.log(\"cool!\")\n+// }\n+\n+// const check = Number(prompt(\"Whats your fav number?\"));\n+// console.log(typeof check);\n+\n+// if (check === 23) { //now check is a number\n+//     console.log(\"coolllllllll 🌻!\");\n+// }\n+\n+//functions\n+// const calcAverage = (a, b, c) => (a + b + c)/3;\n+\n+// const dolpscore = calcAverage(85,54,41);\n+// const koascore = calcAverage(23,34,27);\n+// console.log(dolpscore, koascore);\n+// const  checkWinner = function (dolpscore, koascore) {\n+//     if(dolpscore >= 2 * koascore) {\n+//         console.log(\"dolphin wins\");\n+//     } else {\n+//         console.log(\"koalas win\");\n+//     }\n+// }\n+// checkWinner(dolpscore, koascore);\n+\n+//arrays\n+\n+// const calctip = billvalue => \n+//     billvalue >= 50 && billvalue <= 300 ? billvalue*0.15 : billvalue*0.2;\n+\n+// const bills = [125,555,44];\n+// const tips = [calctip(bills[0]),calctip(bills[1]),calctip(bills[2])]\n+// console.log(bills, tips);\n+\n+// RETRIEVE DATA IN OBJECTS AND CHANGE DATA IN OBJECTS USING DOT AND BRACKET ANNOTATIONS\n+\n+// const jonas = {\n+//     firstName: 'David',\n+//     lastName: 'Schitt',\n+//     age: 2037 - 1991,\n+//     job: 'Teacher',\n+//     friends: ['Peter','Alexis','Mary']\n+// }\n+// console.log(jonas);\n+// console.log(jonas.friends[2]);\n+// console.log(jonas.lastName); // dot annotation\n+// console.log(jonas['lastName']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n+\n+// // variable store which have repeating part\n+\n+// const nameKey = 'Name';\n+// console.log(jonas['first' + nameKey]);  // js will the [] expression and it will become 'firstName' and then it will see jonas with firstName property\n+// console.log(jonas['last' + nameKey]);\n+\n+// // When we need to compute the property name we use bracket annotation\n+\n+// // const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n+\n+// // if(jonas[interestedIn]) {\n+// // console.log(jonas[interestedIn]);\n+// // } else {\n+// //     console.log(\"Oops. Wrong request!\");\n+// // }\n+\n+// // ADD NEW PROPERTIES TO THE OBJECT\n+// jonas.location = 'Paris';\n+// jonas['twitter'] = '@davidschitt'\n+\n+// console.log(jonas);\n+\n+// //Challenge:- dynamic 'Jonas has 3 friends. But his best friend is michael'\n+\n+// console.log(jonas.firstName + ' has '+ jonas.friends.length + ' friends. But his best friend is ' +  jonas.friends[1]); //or\n+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends. But his best friend is ${jonas.friends[1]}`);\n+\n+//Object Methods\n+\n+// const jonas = {\n+//     firstName: 'David',\n+//     lastName: 'Schitt',\n+//     birthyear : 1991,\n+//     job: 'Teacher',\n+//     friends: ['Peter','Alexis','Mary'],\n+//     hasDriverLicense: true,\n+\n+    // calcAge: function(birthyear) {\n+    //     console.log(this);\n+    //     return 2037 - this.birthyear;\n+    // },\n+    // shit: {\n+    //     x: 'asdasdasd',\n+    //     fuckFunction: function (){return (`fuck ${this.x}`)}\n+    // }\n+    // calcAge: function() {\n+    //     this.age = 2037 - this.birthyear;\n+    //     return this.age;\n+    // },\n+    //Challenge\n+    // getSummary: function() {\n+    //     return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`\n+    // }\n+// }\n+// jonas.calcAge();\n+// console.log(jonas.getSummary());\n+// console.log(jonas.age);\n+//console.log(jonas.shit.fuckFunction());\n+//console.log(jonas['calcAge'](1991));\n+\n+//CHALLENGE\n+const mark = {\n+    firstName: 'Mark',\n+    lastName: 'Miller',\n+    mass: 78,\n+    height: 1.69,\n+\n+    calcBMI: function() {\n+        this.bmi = this.mass/this.height ** 2;\n+        return this.bmi;\n+    }\n+}\n+\n+const john = {\n+    firstName: 'John',\n+    lastName: 'Smith',\n+    mass: 92,\n+    height: 1.95,\n+\n+    calcBMI: function() {\n+        this.bmi = this.mass/this.height ** 2;\n+        return this.bmi;\n+    }\n+}\n+\n+mark.calcBMI()\n+john.calcBMI()\n+\n+if(mark.bmi > john.bmi) {\n+    console.log(`${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi} is higher than ${john.firstName} ${john.lastName} BMI ${john.bmi}.`);\n+} else {\n+    console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is higher than ${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi}.`);\n+}\n+\n"
+                },
+                {
+                    "date": 1651060214431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,230 +213,9 @@\n mark.calcBMI()\n john.calcBMI()\n \n if(mark.bmi > john.bmi) {\n-    console.log(`${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi} is higher than ${john.firstName} ${john.lastName} BMI ${john.bmi}.`);\n+    console.log(`${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi} is higher than ${john.firstName} ${john.lastName}'s BMI ${john.bmi}.`);\n } else {\n-    console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is higher than ${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi}.`);\n+    console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is higher than ${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi}.`);\n }\n \n-// const mMass = 78;\n-// const jMass = 92;\n-// const mHeight = 1.69;\n-// const jHeight = 1.95;\n-// mBMI = mMass / (mHeight * mHeight);\n-// jBMI = jMass / (jHeight * jHeight);\n-// console.log(mBMI);\n-// console.log(jBMI);\n-// //const markHigherBMI;\n-// if (mBMI > jBMI) {\n-//     console.log('Mark');\n-// } else {\n-//     console.log('john');\n-// }\n-// //console.log(markHigherBMI);\n-\n-// const name = 'manvi';\n-// const string1 = `I'm ${name}`;\n-// console.log(string1);\n-\n-// console.log(`Hi\n-//         Hey \n-//         Hola `);\n-\n-// const age = 15;\n-// if (age >= 18) {\n-//     console.log(`Yes 🚕`);\n-// } else {\n-//     const howMuch = 18 - age;\n-//     console.log(`She has to for ${howMuch} years`);\n-// }\n-\n-// let n = '1' + 1; // string + int\n-// n -= 1;\n-// console.log(n); // ans  = 11   // 2+3+4+\"5\" == \"95\"\n-\n-// // string - string = number\n-// // string + number = string\n-// // eg = '10' - '4' - '3' -2 + '5' = 10-4 = 6 -3 =3 -2 = 1 +'5' = 15\n-\n-// // falsy values are not exactly false but it becomes false when we convert into boolena\n-// // 5 falsy values :- 0, \"\", null, undefined, NaN\n-\n-// console.log(Boolean(0));\n-// console.log(Boolean(null));\n-// console.log(Boolean(\"\"));\n-// console.log(Boolean(undefined));\n-// console.log(Boolean(NaN));\n-\n-// console.log(Boolean(2));\n-// console.log(Boolean(`Hiii`));\n-// console.log(Boolean({})); //empty object\n-\n-// const money = 0;\n-// if (money) {\n-//     console.log(\"Dont spent it\");\n-// } else {\n-//     console.log(\"spent it\");\n-// }\n-\n-\n-// const age1 = 18;\n-// if (age === 18) { //strict equality operator doesnot perform type coercion\n-//     console.log(\"hii\"); //true\n-// }\n-\n-// if ('18' == 18) { // loose equality operator , performs type coercion\n-//     console.log(\"hola\"); //true\n-// }\n-\n-// if ('18' === 18) {\n-//     console.log(\"gracias \"); //false\n-// }\n-\n-// const fav = prompt(\"Whats your fav color?\");\n-// console.log(fav);\n-// console.log(typeof fav);\n-\n-// if (fav == 23) { //'23' is a string so thats why we used '==' '23' == 23\n-//     console.log(\"cool!\")\n-// }\n-\n-// const check = Number(prompt(\"Whats your fav number?\"));\n-// console.log(typeof check);\n-\n-// if (check === 23) { //now check is a number\n-//     console.log(\"coolllllllll 🌻!\");\n-// }\n-\n-//functions\n-// const calcAverage = (a, b, c) => (a + b + c)/3;\n-\n-// const dolpscore = calcAverage(85,54,41);\n-// const koascore = calcAverage(23,34,27);\n-// console.log(dolpscore, koascore);\n-// const  checkWinner = function (dolpscore, koascore) {\n-//     if(dolpscore >= 2 * koascore) {\n-//         console.log(\"dolphin wins\");\n-//     } else {\n-//         console.log(\"koalas win\");\n-//     }\n-// }\n-// checkWinner(dolpscore, koascore);\n-\n-//arrays\n-\n-// const calctip = billvalue => \n-//     billvalue >= 50 && billvalue <= 300 ? billvalue*0.15 : billvalue*0.2;\n-\n-// const bills = [125,555,44];\n-// const tips = [calctip(bills[0]),calctip(bills[1]),calctip(bills[2])]\n-// console.log(bills, tips);\n-\n-// RETRIEVE DATA IN OBJECTS AND CHANGE DATA IN OBJECTS USING DOT AND BRACKET ANNOTATIONS\n-\n-// const jonas = {\n-//     firstName: 'David',\n-//     lastName: 'Schitt',\n-//     age: 2037 - 1991,\n-//     job: 'Teacher',\n-//     friends: ['Peter','Alexis','Mary']\n-// }\n-// console.log(jonas);\n-// console.log(jonas.friends[2]);\n-// console.log(jonas.lastName); // dot annotation\n-// console.log(jonas['lastName']); //bracket annotation // we can put any expression that we like. don't have to write string explicitly \n-\n-// // variable store which have repeating part\n-\n-// const nameKey = 'Name';\n-// console.log(jonas['first' + nameKey]);  // js will the [] expression and it will become 'firstName' and then it will see jonas with firstName property\n-// console.log(jonas['last' + nameKey]);\n-\n-// // When we need to compute the property name we use bracket annotation\n-\n-// // const interestedIn = prompt(\"what do you want to know about David? choose between firstName, lastname, job, age, friends.\");\n-\n-// // if(jonas[interestedIn]) {\n-// // console.log(jonas[interestedIn]);\n-// // } else {\n-// //     console.log(\"Oops. Wrong request!\");\n-// // }\n-\n-// // ADD NEW PROPERTIES TO THE OBJECT\n-// jonas.location = 'Paris';\n-// jonas['twitter'] = '@davidschitt'\n-\n-// console.log(jonas);\n-\n-// //Challenge:- dynamic 'Jonas has 3 friends. But his best friend is michael'\n-\n-// console.log(jonas.firstName + ' has '+ jonas.friends.length + ' friends. But his best friend is ' +  jonas.friends[1]); //or\n-// console.log(`${jonas.firstName} has ${jonas.friends.length} friends. But his best friend is ${jonas.friends[1]}`);\n-\n-//Object Methods\n-\n-// const jonas = {\n-//     firstName: 'David',\n-//     lastName: 'Schitt',\n-//     birthyear : 1991,\n-//     job: 'Teacher',\n-//     friends: ['Peter','Alexis','Mary'],\n-//     hasDriverLicense: true,\n-\n-    // calcAge: function(birthyear) {\n-    //     console.log(this);\n-    //     return 2037 - this.birthyear;\n-    // },\n-    // shit: {\n-    //     x: 'asdasdasd',\n-    //     fuckFunction: function (){return (`fuck ${this.x}`)}\n-    // }\n-    // calcAge: function() {\n-    //     this.age = 2037 - this.birthyear;\n-    //     return this.age;\n-    // },\n-    //Challenge\n-    // getSummary: function() {\n-    //     return `${this.firstName} is a ${this.calcAge()}-year old teacher, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`\n-    // }\n-// }\n-// jonas.calcAge();\n-// console.log(jonas.getSummary());\n-// console.log(jonas.age);\n-//console.log(jonas.shit.fuckFunction());\n-//console.log(jonas['calcAge'](1991));\n-\n-//CHALLENGE\n-const mark = {\n-    firstName: 'Mark',\n-    lastName: 'Miller',\n-    mass: 78,\n-    height: 1.69,\n-\n-    calcBMI: function() {\n-        this.bmi = this.mass/this.height ** 2;\n-        return this.bmi;\n-    }\n-}\n-\n-const john = {\n-    firstName: 'John',\n-    lastName: 'Smith',\n-    mass: 92,\n-    height: 1.95,\n-\n-    calcBMI: function() {\n-        this.bmi = this.mass/this.height ** 2;\n-        return this.bmi;\n-    }\n-}\n-\n-mark.calcBMI()\n-john.calcBMI()\n-\n-if(mark.bmi > john.bmi) {\n-    console.log(`${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi} is higher than ${john.firstName}'s ${john.lastName} BMI ${john.bmi}.`);\n-} else {\n-    console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is higher than ${mark.firstName}'s ${mark.lastName} BMI ${mark.bmi}.`);\n-}\n-\n"
+                },
+                {
+                    "date": 1651060262768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -185,37 +185,7 @@\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n //CHALLENGE\n-const mark = {\n-    firstName: 'Mark',\n-    lastName: 'Miller',\n-    mass: 78,\n-    height: 1.69,\n+// \n \n-    calcBMI: function() {\n-        this.bmi = this.mass/this.height ** 2;\n-        return this.bmi;\n-    }\n-}\n \n-const john = {\n-    firstName: 'John',\n-    lastName: 'Smith',\n-    mass: 92,\n-    height: 1.95,\n-\n-    calcBMI: function() {\n-        this.bmi = this.mass/this.height ** 2;\n-        return this.bmi;\n-    }\n-}\n-\n-mark.calcBMI()\n-john.calcBMI()\n-\n-if(mark.bmi > john.bmi) {\n-    console.log(`${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi} is higher than ${john.firstName} ${john.lastName}'s BMI ${john.bmi}.`);\n-} else {\n-    console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is higher than ${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi}.`);\n-}\n-\n"
+                },
+                {
+                    "date": 1651060586427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -185,7 +185,39 @@\n //console.log(jonas.shit.fuckFunction());\n //console.log(jonas['calcAge'](1991));\n \n //CHALLENGE\n-// \n+// const mark = {\n+//     firstName: 'Mark',\n+//     lastName: 'Miller',\n+//     mass: 78,\n+//     height: 1.69,\n \n+//     calcBMI: function() {\n+//         this.bmi = this.mass/this.height ** 2;\n+//         return this.bmi;\n+//     }\n+// }\n \n+// const john = {\n+//     firstName: 'John',\n+//     lastName: 'Smith',\n+//     mass: 92,\n+//     height: 1.95,\n+\n+//     calcBMI: function() {\n+//         this.bmi = this.mass/this.height ** 2;\n+//         return this.bmi;\n+//     }\n+// }\n+\n+// mark.calcBMI()\n+// john.calcBMI()\n+\n+// if(mark.bmi > john.bmi) {\n+//     console.log(`${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi} is higher than ${john.firstName} ${john.lastName}'s BMI ${john.bmi}.`);\n+// } else {\n+//     console.log(`${john.firstName} ${john.lastName}'s BMI ${john.bmi} is higher than ${mark.firstName} ${mark.lastName}'s BMI ${mark.bmi}.`);\n+// }\n+\n+//ITERATION\n+\n"
+                },
+                {
+                    "date": 1651644086433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -220,4 +220,8 @@\n // }\n \n //ITERATION\n \n+const jonas = [\n+    \n+]\n+\n"
+                },
+                {
+                    "date": 1651644095987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -221,7 +221,7 @@\n \n //ITERATION\n \n const jonas = [\n-    \n+    'K'\n ]\n \n"
+                },
+                {
+                    "date": 1651644101718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -220,8 +220,8 @@\n // }\n \n //ITERATION\n \n-const jonas = [\n-    'K'\n+const david = [\n+    ''\n ]\n \n"
+                },
+                {
+                    "date": 1651644111548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -221,7 +221,9 @@\n \n //ITERATION\n \n const david = [\n-    ''\n+    'David',\n+    'Rose',\n+    \n ]\n \n"
+                },
+                {
+                    "date": 1651644119646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -223,7 +223,8 @@\n \n const david = [\n     'David',\n     'Rose',\n+    2037-1991,\n     \n ]\n \n"
+                },
+                {
+                    "date": 1651644128786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -224,7 +224,7 @@\n const david = [\n     'David',\n     'Rose',\n     2037-1991,\n-    \n+    'ente'\n ]\n \n"
+                },
+                {
+                    "date": 1651644134667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -224,7 +224,8 @@\n const david = [\n     'David',\n     'Rose',\n     2037-1991,\n-    'ente'\n+    'enterprenuer',\n+    \n ]\n \n"
+                },
+                {
+                    "date": 1651644139879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,7 +225,7 @@\n     'David',\n     'Rose',\n     2037-1991,\n     'enterprenuer',\n-    \n+    ['Peter']\n ]\n \n"
+                },
+                {
+                    "date": 1651644145657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,7 +225,7 @@\n     'David',\n     'Rose',\n     2037-1991,\n     'enterprenuer',\n-    ['Peter']\n+    ['Peter', 'Alexis', ]\n ]\n \n"
+                },
+                {
+                    "date": 1651644185581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,7 +225,7 @@\n     'David',\n     'Rose',\n     2037-1991,\n     'enterprenuer',\n-    ['Peter', 'Alexis', ]\n+    ['Peter', 'Alexis', 'Stevie']\n ]\n \n"
+                },
+                {
+                    "date": 1651644192553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,7 +225,8 @@\n     'David',\n     'Rose',\n     2037-1991,\n     'enterprenuer',\n-    ['Peter', 'Alexis', 'Stevie']\n+    ['Peter', 'Alexis', 'Stevie'],\n+    true\n ]\n \n"
+                },
+                {
+                    "date": 1651644200743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -227,6 +227,9 @@\n     2037-1991,\n     'enterprenuer',\n     ['Peter', 'Alexis', 'Stevie'],\n     true\n-]\n+];\n \n+const types = [];\n+\n+\n"
+                },
+                {
+                    "date": 1651644206269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,6 +230,6 @@\n     true\n ];\n \n const types = [];\n+for(let i)\n \n-\n"
+                },
+                {
+                    "date": 1651644215777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,6 +230,6 @@\n     true\n ];\n \n const types = [];\n-for(let i)\n+for(let i = 0; i < david.length)\n \n"
+                },
+                {
+                    "date": 1651644224236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,6 +230,8 @@\n     true\n ];\n \n const types = [];\n-for(let i = 0; i < david.length)\n+for(let i = 0; i < david.length; i++) {\n+    console.log()\n+}\n \n"
+                },
+                {
+                    "date": 1651644232134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -231,7 +231,7 @@\n ];\n \n const types = [];\n for(let i = 0; i < david.length; i++) {\n-    console.log()\n+    console.log(david[i], ty)\n }\n \n"
+                },
+                {
+                    "date": 1651644240275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -231,7 +231,7 @@\n ];\n \n const types = [];\n for(let i = 0; i < david.length; i++) {\n-    console.log(david[i], ty)\n+    console.log(david[i], typeof david[i])\n }\n \n"
+                },
+                {
+                    "date": 1651644279674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -231,7 +231,9 @@\n ];\n \n const types = [];\n for(let i = 0; i < david.length; i++) {\n-    console.log(david[i], typeof david[i])\n+    console.log(david[i], typeof david[i]);\n+\n+    // fi\n }\n \n"
+                },
+                {
+                    "date": 1651644291561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -233,7 +233,8 @@\n const types = [];\n for(let i = 0; i < david.length; i++) {\n     console.log(david[i], typeof david[i]);\n \n-    // fi\n+    // filling types array\n+    /\n }\n \n"
+                },
+                {
+                    "date": 1651644300647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -234,7 +234,7 @@\n for(let i = 0; i < david.length; i++) {\n     console.log(david[i], typeof david[i]);\n \n     // filling types array\n-    /\n+    // types [i]\n }\n \n"
+                },
+                {
+                    "date": 1651644308428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -234,7 +234,7 @@\n for(let i = 0; i < david.length; i++) {\n     console.log(david[i], typeof david[i]);\n \n     // filling types array\n-    // types [i]\n+    // types [i] = typeof \n }\n \n"
+                },
+                {
+                    "date": 1651644314400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -234,7 +234,8 @@\n for(let i = 0; i < david.length; i++) {\n     console.log(david[i], typeof david[i]);\n \n     // filling types array\n-    // types [i] = typeof \n+    // types [i] = typeof david[i]\n+    \n }\n \n"
+                },
+                {
+                    "date": 1651644324138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -235,7 +235,7 @@\n     console.log(david[i], typeof david[i]);\n \n     // filling types array\n     // types [i] = typeof david[i]\n-    \n+\n }\n \n"
+                },
+                {
+                    "date": 1651644330262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -235,7 +235,7 @@\n     console.log(david[i], typeof david[i]);\n \n     // filling types array\n     // types [i] = typeof david[i]\n-\n+    types.push()\n }\n \n"
+                },
+                {
+                    "date": 1651644336341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -235,7 +235,7 @@\n     console.log(david[i], typeof david[i]);\n \n     // filling types array\n     // types [i] = typeof david[i]\n-    types.push()\n+    types.push(typeof jon)\n }\n \n"
+                },
+                {
+                    "date": 1651644341983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -235,7 +235,7 @@\n     console.log(david[i], typeof david[i]);\n \n     // filling types array\n     // types [i] = typeof david[i]\n-    types.push(typeof jon)\n+    types.push(typeof david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651644352444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -237,5 +237,6 @@\n     // filling types array\n     // types [i] = typeof david[i]\n     types.push(typeof david[i]);\n }\n+console.log\n \n"
+                },
+                {
+                    "date": 1651646921768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -220,23 +220,23 @@\n // }\n \n //ITERATION\n \n-const david = [\n-    'David',\n-    'Rose',\n-    2037-1991,\n-    'enterprenuer',\n-    ['Peter', 'Alexis', 'Stevie'],\n-    true\n-];\n+// const david = [\n+//     'David',\n+//     'Rose',\n+//     2037-1991,\n+//     'enterprenuer',\n+//     ['Peter', 'Alexis', 'Stevie'],\n+//     true\n+// ];\n \n-const types = [];\n-for(let i = 0; i < david.length; i++) {\n-    console.log(david[i], typeof david[i]);\n+// const types = [];\n+// for(let i = 0; i < david.length; i++) {\n+//     console.log(david[i], typeof david[i]);\n \n-    // filling types array\n-    // types [i] = typeof david[i]\n-    types.push(typeof david[i]);\n-}\n-console.log\n+//     // filling types array\n+//     // types [i] = typeof david[i]\n+//     types.push(typeof david[i]);\n+// }\n+// console.log(types)\n \n"
+                },
+                {
+                    "date": 1651646929621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -239,4 +239,6 @@\n //     types.push(typeof david[i]);\n // }\n // console.log(types)\n \n+const years = []\n+\n"
+                },
+                {
+                    "date": 1651646940115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -239,6 +239,6 @@\n //     types.push(typeof david[i]);\n // }\n // console.log(types)\n \n-const years = []\n+const years = [1991, 2001, ]\n \n"
+                },
+                {
+                    "date": 1651646946887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -239,6 +239,7 @@\n //     types.push(typeof david[i]);\n // }\n // console.log(types)\n \n-const years = [1991, 2001, ]\n+const years = [1991, 2001, 2011, 2021];\n \n+\n"
+                },
+                {
+                    "date": 1651646956945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -240,6 +240,8 @@\n // }\n // console.log(types)\n \n const years = [1991, 2001, 2011, 2021];\n+const ages = [];\n \n+for(let i -)\n \n"
+                },
+                {
+                    "date": 1651646969630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -242,6 +242,6 @@\n \n const years = [1991, 2001, 2011, 2021];\n const ages = [];\n \n-for(let i -)\n+for(let i =0; i < years.length; i++)\n \n"
+                },
+                {
+                    "date": 1651646976408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -242,6 +242,8 @@\n \n const years = [1991, 2001, 2011, 2021];\n const ages = [];\n \n-for(let i =0; i < years.length; i++)\n+for(let i =0; i < years.length; i++) {\n+    ages\n+}\n \n"
+                },
+                {
+                    "date": 1651646982311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,7 +243,7 @@\n const years = [1991, 2001, 2011, 2021];\n const ages = [];\n \n for(let i =0; i < years.length; i++) {\n-    ages\n+    ages.push(2037-)\n }\n \n"
+                },
+                {
+                    "date": 1651646988772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,7 +243,7 @@\n const years = [1991, 2001, 2011, 2021];\n const ages = [];\n \n for(let i =0; i < years.length; i++) {\n-    ages.push(2037-)\n+    ages.push(2037-years[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651646994399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -245,5 +245,6 @@\n \n for(let i =0; i < years.length; i++) {\n     ages.push(2037-years[i]);\n }\n+console.log\n \n"
+                },
+                {
+                    "date": 1651646999936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -245,6 +245,6 @@\n \n for(let i =0; i < years.length; i++) {\n     ages.push(2037-years[i]);\n }\n-console.log\n+console.log(ages;)\n \n"
+                },
+                {
+                    "date": 1651647263454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -220,31 +220,31 @@\n // }\n \n //ITERATION\n \n-// const david = [\n-//     'David',\n-//     'Rose',\n-//     2037-1991,\n-//     'enterprenuer',\n-//     ['Peter', 'Alexis', 'Stevie'],\n-//     true\n-// ];\n+const david = [\n+    'David',\n+    'Rose',\n+    2037-1991,\n+    'enterprenuer',\n+    ['Peter', 'Alexis', 'Stevie'],\n+    true\n+];\n \n-// const types = [];\n-// for(let i = 0; i < david.length; i++) {\n-//     console.log(david[i], typeof david[i]);\n+const types = [];\n+for(let i = 0; i < david.length; i++) {\n+    console.log(david[i], typeof david[i]);\n \n-//     // filling types array\n-//     // types [i] = typeof david[i]\n-//     types.push(typeof david[i]);\n-// }\n-// console.log(types)\n+    // filling types array\n+    // types [i] = typeof david[i]\n+    types.push(typeof david[i]);\n+}\n+console.log(types)\n \n const years = [1991, 2001, 2011, 2021];\n const ages = [];\n \n for(let i =0; i < years.length; i++) {\n     ages.push(2037-years[i]);\n }\n-console.log(ages;)\n+console.log(ages);\n \n"
+                },
+                {
+                    "date": 1651647275168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -247,4 +247,6 @@\n     ages.push(2037-years[i]);\n }\n console.log(ages);\n \n+// \n+\n"
+                },
+                {
+                    "date": 1651647286220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -247,6 +247,7 @@\n     ages.push(2037-years[i]);\n }\n console.log(ages);\n \n-// \n+// CONTINUE AND BREAK\n+// CONTINUE :-  \n \n"
+                },
+                {
+                    "date": 1651647295182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -248,6 +248,6 @@\n }\n console.log(ages);\n \n // CONTINUE AND BREAK\n-// CONTINUE :-  \n+// CONTINUE :-  TO EXIST CURRENT \n \n"
+                },
+                {
+                    "date": 1651647301289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -248,6 +248,6 @@\n }\n console.log(ages);\n \n // CONTINUE AND BREAK\n-// CONTINUE :-  TO EXIST CURRENT \n+// CONTINUE :-  TO EXIST CURRENT ITERATION OF L\n \n"
+                },
+                {
+                    "date": 1651647310558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -248,6 +248,6 @@\n }\n console.log(ages);\n \n // CONTINUE AND BREAK\n-// CONTINUE :-  TO EXIST CURRENT ITERATION OF L\n+// CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY \n \n"
+                },
+                {
+                    "date": 1651647322889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -248,6 +248,7 @@\n }\n console.log(ages);\n \n // CONTINUE AND BREAK\n-// CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY \n+// CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n+// BREAK:- \n \n"
+                },
+                {
+                    "date": 1651647340955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -249,6 +249,14 @@\n console.log(ages);\n \n // CONTINUE AND BREAK\n // CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n-// BREAK:- \n+// BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n+for(let i = 0; i < david.length; i++) {\n+    console.log(david[i], typeof david[i]);\n+\n+    // filling types array\n+    // types [i] = typeof david[i]\n+    types.push(typeof david[i]);\n+}\n+\n"
+                },
+                {
+                    "date": 1651647346077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -253,10 +253,6 @@\n // BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n for(let i = 0; i < david.length; i++) {\n     console.log(david[i], typeof david[i]);\n-\n-    // filling types array\n-    // types [i] = typeof david[i]\n-    types.push(typeof david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651647351915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -252,7 +252,8 @@\n // CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n // BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n for(let i = 0; i < david.length; i++) {\n+    if\n     console.log(david[i], typeof david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651647359519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -252,8 +252,8 @@\n // CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n // BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n for(let i = 0; i < david.length; i++) {\n-    if\n+    if(typeof david[i])\n     console.log(david[i], typeof david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651647368160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -252,8 +252,8 @@\n // CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n // BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n for(let i = 0; i < david.length; i++) {\n-    if(typeof david[i])\n+    if(typeof david[i] != 'string') continue;\n     console.log(david[i], typeof david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651647427599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -256,4 +256,12 @@\n     if(typeof david[i] != 'string') continue;\n     console.log(david[i], typeof david[i]);\n }\n \n+for(let i = 0; i < david.length; i++) {\n+    console.log(david[i], typeof david[i]);\n+\n+    // filling types array\n+    // types [i] = typeof david[i]\n+    types.push(typeof david[i]);\n+}\n+\n"
+                },
+                {
+                    "date": 1651647433247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -258,10 +258,6 @@\n }\n \n for(let i = 0; i < david.length; i++) {\n     console.log(david[i], typeof david[i]);\n-\n-    // filling types array\n-    // types [i] = typeof david[i]\n-    types.push(typeof david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651647439851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -251,8 +251,9 @@\n // CONTINUE AND BREAK\n // CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n // BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n+//CONTINUE\n for(let i = 0; i < david.length; i++) {\n     if(typeof david[i] != 'string') continue;\n     console.log(david[i], typeof david[i]);\n }\n"
+                },
+                {
+                    "date": 1651647472582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -257,8 +257,10 @@\n     if(typeof david[i] != 'string') continue;\n     console.log(david[i], typeof david[i]);\n }\n \n+//BREAK\n for(let i = 0; i < david.length; i++) {\n+    if(typeof david[i] != 'string') continue;\n     console.log(david[i], typeof david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651647479482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -259,8 +259,8 @@\n }\n \n //BREAK\n for(let i = 0; i < david.length; i++) {\n-    if(typeof david[i] != 'string') continue;\n+    if(typeof david[i] === 'string') break;\n     console.log(david[i], typeof david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651647516407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -252,15 +252,16 @@\n // CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n // BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n //CONTINUE\n+console.log('')\n for(let i = 0; i < david.length; i++) {\n     if(typeof david[i] != 'string') continue;\n     console.log(david[i], typeof david[i]);\n }\n \n //BREAK\n for(let i = 0; i < david.length; i++) {\n-    if(typeof david[i] === 'string') break;\n+    if(typeof david[i] === 'number') break;\n     console.log(david[i], typeof david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651647526846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -252,9 +252,9 @@\n // CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n // BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n //CONTINUE\n-console.log('')\n+console.log('---ONLY STRINGS--')\n for(let i = 0; i < david.length; i++) {\n     if(typeof david[i] != 'string') continue;\n     console.log(david[i], typeof david[i]);\n }\n"
+                },
+                {
+                    "date": 1651647533169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -251,10 +251,10 @@\n // CONTINUE AND BREAK\n // CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n // BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n-//CONTINUE\n-console.log('---ONLY STRINGS--')\n+//CONTINU\n+console.log('---ONLY STRINGS---';)\n for(let i = 0; i < david.length; i++) {\n     if(typeof david[i] != 'string') continue;\n     console.log(david[i], typeof david[i]);\n }\n"
+                },
+                {
+                    "date": 1651647539619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -251,10 +251,10 @@\n // CONTINUE AND BREAK\n // CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n // BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n-//CONTINU\n-console.log('---ONLY STRINGS---';)\n+//CONTINUE\n+console.log('---ONLY STRINGS---');\n for(let i = 0; i < david.length; i++) {\n     if(typeof david[i] != 'string') continue;\n     console.log(david[i], typeof david[i]);\n }\n"
+                },
+                {
+                    "date": 1651647544763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -259,8 +259,9 @@\n     console.log(david[i], typeof david[i]);\n }\n \n //BREAK\n+console.log('---ONLY STRINGS---');\n for(let i = 0; i < david.length; i++) {\n     if(typeof david[i] === 'number') break;\n     console.log(david[i], typeof david[i]);\n }\n"
+                },
+                {
+                    "date": 1651647553532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -259,9 +259,9 @@\n     console.log(david[i], typeof david[i]);\n }\n \n //BREAK\n-console.log('---ONLY STRINGS---');\n+console.log('---BREAK WITH NUMBER---');\n for(let i = 0; i < david.length; i++) {\n     if(typeof david[i] === 'number') break;\n     console.log(david[i], typeof david[i]);\n }\n"
+                },
+                {
+                    "date": 1651648006098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -220,49 +220,49 @@\n // }\n \n //ITERATION\n \n-const david = [\n-    'David',\n-    'Rose',\n-    2037-1991,\n-    'enterprenuer',\n-    ['Peter', 'Alexis', 'Stevie'],\n-    true\n-];\n+// const david = [\n+//     'David',\n+//     'Rose',\n+//     2037-1991,\n+//     'enterprenuer',\n+//     ['Peter', 'Alexis', 'Stevie'],\n+//     true\n+// ];\n \n-const types = [];\n-for(let i = 0; i < david.length; i++) {\n-    console.log(david[i], typeof david[i]);\n+// const types = [];\n+// for(let i = 0; i < david.length; i++) {\n+//     console.log(david[i], typeof david[i]);\n \n-    // filling types array\n-    // types [i] = typeof david[i]\n-    types.push(typeof david[i]);\n-}\n-console.log(types)\n+//     // filling types array\n+//     // types [i] = typeof david[i]\n+//     types.push(typeof david[i]);\n+// }\n+// console.log(types)\n \n-const years = [1991, 2001, 2011, 2021];\n-const ages = [];\n+// const years = [1991, 2001, 2011, 2021];\n+// const ages = [];\n \n-for(let i =0; i < years.length; i++) {\n-    ages.push(2037-years[i]);\n-}\n-console.log(ages);\n+// for(let i =0; i < years.length; i++) {\n+//     ages.push(2037-years[i]);\n+// }\n+// console.log(ages);\n \n-// CONTINUE AND BREAK\n-// CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n-// BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n+// // CONTINUE AND BREAK\n+// // CONTINUE :-  TO EXIST CURRENT ITERATION OF LOOP AND IMMEDIATELY CONTINUE TO NEXT ONE.\n+// // BREAK:- USED TO COMPLETELY TERMINATE THE WHOLE LOOP\n \n-//CONTINUE\n-console.log('---ONLY STRINGS---');\n-for(let i = 0; i < david.length; i++) {\n-    if(typeof david[i] != 'string') continue;\n-    console.log(david[i], typeof david[i]);\n-}\n+// //CONTINUE\n+// console.log('---ONLY STRINGS---');\n+// for(let i = 0; i < david.length; i++) {\n+//     if(typeof david[i] != 'string') continue;\n+//     console.log(david[i], typeof david[i]);\n+// }\n \n-//BREAK\n-console.log('---BREAK WITH NUMBER---');\n-for(let i = 0; i < david.length; i++) {\n-    if(typeof david[i] === 'number') break;\n-    console.log(david[i], typeof david[i]);\n-}\n+// //BREAK\n+// console.log('---BREAK WITH NUMBER---');\n+// for(let i = 0; i < david.length; i++) {\n+//     if(typeof david[i] === 'number') break;\n+//     console.log(david[i], typeof david[i]);\n+// }\n \n"
+                },
+                {
+                    "date": 1651648017708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -265,4 +265,14 @@\n //     if(typeof david[i] === 'number') break;\n //     console.log(david[i], typeof david[i]);\n // }\n \n+// LOOPING BACKWARDS\n+const david = [\n+    'David',\n+    'Rose',\n+    2037-1991,\n+    'enterprenuer',\n+    ['Peter', 'Alexis', 'Stevie'],\n+    true\n+];\n+\n"
+                },
+                {
+                    "date": 1651648039858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -275,4 +275,6 @@\n     ['Peter', 'Alexis', 'Stevie'],\n     true\n ];\n \n+\n+\n"
+                },
+                {
+                    "date": 1651648045223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -275,6 +275,6 @@\n     ['Peter', 'Alexis', 'Stevie'],\n     true\n ];\n \n+for(let i )\n \n-\n"
+                },
+                {
+                    "date": 1651648052281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -275,6 +275,6 @@\n     ['Peter', 'Alexis', 'Stevie'],\n     true\n ];\n \n-for(let i )\n+for(let i = )\n \n"
+                },
+                {
+                    "date": 1651648066028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -275,6 +275,6 @@\n     ['Peter', 'Alexis', 'Stevie'],\n     true\n ];\n \n-for(let i = )\n+for(let i = david.length ; i > 0; )\n \n"
+                },
+                {
+                    "date": 1651648073676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -275,6 +275,8 @@\n     ['Peter', 'Alexis', 'Stevie'],\n     true\n ];\n \n-for(let i = david.length ; i > 0; )\n+for(let i = david.length ; i > 0; i--) {\n+    co\n+}\n \n"
+                },
+                {
+                    "date": 1651648081236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -276,7 +276,7 @@\n     true\n ];\n \n for(let i = david.length ; i > 0; i--) {\n-    co\n+    console.log(d)\n }\n \n"
+                },
+                {
+                    "date": 1651648089397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -276,7 +276,7 @@\n     true\n ];\n \n for(let i = david.length ; i > 0; i--) {\n-    console.log(d)\n+    console.log(david[i])\n }\n \n"
+                },
+                {
+                    "date": 1651648105913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -275,8 +275,8 @@\n     ['Peter', 'Alexis', 'Stevie'],\n     true\n ];\n \n-for(let i = david.length ; i > 0; i--) {\n-    console.log(david[i])\n+for(let i = david.length - ; i > 0; i--) {\n+    console.log(david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651648229772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -275,8 +275,8 @@\n     ['Peter', 'Alexis', 'Stevie'],\n     true\n ];\n \n-for(let i = david.length - ; i > 0; i--) {\n+for(let i = david.length - 1 ; i >= 0; i--) {\n     console.log(david[i]);\n }\n \n"
+                },
+                {
+                    "date": 1651653784437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -279,4 +279,6 @@\n for(let i = david.length - 1 ; i >= 0; i--) {\n     console.log(david[i]);\n }\n \n+\n+\n"
+                },
+                {
+                    "date": 1651653792124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -266,19 +266,21 @@\n //     console.log(david[i], typeof david[i]);\n // }\n \n // LOOPING BACKWARDS\n-const david = [\n-    'David',\n-    'Rose',\n-    2037-1991,\n-    'enterprenuer',\n-    ['Peter', 'Alexis', 'Stevie'],\n-    true\n-];\n+// const david = [\n+//     'David',\n+//     'Rose',\n+//     2037-1991,\n+//     'enterprenuer',\n+//     ['Peter', 'Alexis', 'Stevie'],\n+//     true\n+// ];\n \n-for(let i = david.length - 1 ; i >= 0; i--) {\n-    console.log(david[i]);\n-}\n+// for(let i = david.length - 1 ; i >= 0; i--) {\n+//     console.log(david[i]);\n+// }\n \n+//\n \n \n+\n"
+                },
+                {
+                    "date": 1651653797791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -279,8 +279,9 @@\n // for(let i = david.length - 1 ; i >= 0; i--) {\n //     console.log(david[i]);\n // }\n \n-//\n+// WHILE LOOP\n \n \n \n+\n"
+                },
+                {
+                    "date": 1651654234835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -280,8 +280,9 @@\n //     console.log(david[i]);\n // }\n \n // WHILE LOOP\n+let dice = 1;\n \n \n \n \n"
+                },
+                {
+                    "date": 1651654242084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -280,9 +280,9 @@\n //     console.log(david[i]);\n // }\n \n // WHILE LOOP\n-let dice = 1;\n+let dice = Math.random(0);\n \n \n \n \n"
+                },
+                {
+                    "date": 1651654248547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -280,9 +280,9 @@\n //     console.log(david[i]);\n // }\n \n // WHILE LOOP\n-let dice = Math.random(0);\n+let dice = Math.random()* 6;\n \n \n \n \n"
+                },
+                {
+                    "date": 1651654265169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -280,9 +280,10 @@\n //     console.log(david[i]);\n // }\n \n // WHILE LOOP\n-let dice = Math.random()* 6;\n+let dice = Math.trunc Math.random() * 6;\n \n \n \n \n+\n"
+                },
+                {
+                    "date": 1651654271482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -280,9 +280,9 @@\n //     console.log(david[i]);\n // }\n \n // WHILE LOOP\n-let dice = Math.trunc Math.random() * 6;\n+let dice = Math.trunc(Math.random() * 6);\n \n \n \n \n"
+                },
+                {
+                    "date": 1651654284522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -281,8 +281,9 @@\n // }\n \n // WHILE LOOP\n let dice = Math.trunc(Math.random() * 6);\n+console.log(dice)\n \n \n \n \n"
+                },
+                {
+                    "date": 1651654343408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -280,10 +280,10 @@\n //     console.log(david[i]);\n // }\n \n // WHILE LOOP\n-let dice = Math.trunc(Math.random() * 6);\n-console.log(dice)\n+let dice = Math.trunc(Math.random() * 6) + 1;\n+console.log(dice);\n \n \n \n \n"
+                },
+                {
+                    "date": 1651654355975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -281,9 +281,9 @@\n // }\n \n // WHILE LOOP\n let dice = Math.trunc(Math.random() * 6) + 1;\n-console.log(dice);\n+while(dice !== 6)\n \n \n \n \n"
+                },
+                {
+                    "date": 1651654363047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -281,9 +281,11 @@\n // }\n \n // WHILE LOOP\n let dice = Math.trunc(Math.random() * 6) + 1;\n-while(dice !== 6)\n+while(dice !== 6) {\n+    console.log\n+}\n \n \n \n \n"
+                },
+                {
+                    "date": 1651654372321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -282,9 +282,9 @@\n \n // WHILE LOOP\n let dice = Math.trunc(Math.random() * 6) + 1;\n while(dice !== 6) {\n-    console.log\n+    console.log(`You rolled a `)\n }\n \n \n \n"
+                },
+                {
+                    "date": 1651654378754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -282,9 +282,9 @@\n \n // WHILE LOOP\n let dice = Math.trunc(Math.random() * 6) + 1;\n while(dice !== 6) {\n-    console.log(`You rolled a `)\n+    console.log(`You rolled a ${dice}`)\n }\n \n \n \n"
+                },
+                {
+                    "date": 1651654417076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -282,9 +282,10 @@\n \n // WHILE LOOP\n let dice = Math.trunc(Math.random() * 6) + 1;\n while(dice !== 6) {\n-    console.log(`You rolled a ${dice}`)\n+    console.log(`You rolled a ${dice}`);\n+    dice = Math.trunc(Math.random() * 6) + 1;\n }\n \n \n \n"
+                },
+                {
+                    "date": 1651655068416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -284,8 +284,9 @@\n let dice = Math.trunc(Math.random() * 6) + 1;\n while(dice !== 6) {\n     console.log(`You rolled a ${dice}`);\n     dice = Math.trunc(Math.random() * 6) + 1;\n+    \n }\n \n \n \n"
+                },
+                {
+                    "date": 1651655074634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -284,9 +284,9 @@\n let dice = Math.trunc(Math.random() * 6) + 1;\n while(dice !== 6) {\n     console.log(`You rolled a ${dice}`);\n     dice = Math.trunc(Math.random() * 6) + 1;\n-    \n+    if(dice === 6)\n }\n \n \n \n"
+                },
+                {
+                    "date": 1651655080017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -284,9 +284,11 @@\n let dice = Math.trunc(Math.random() * 6) + 1;\n while(dice !== 6) {\n     console.log(`You rolled a ${dice}`);\n     dice = Math.trunc(Math.random() * 6) + 1;\n-    if(dice === 6)\n+    if(dice === 6) {\n+        cosole\n+    }\n }\n \n \n \n"
+                },
+                {
+                    "date": 1651655085276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -285,9 +285,9 @@\n while(dice !== 6) {\n     console.log(`You rolled a ${dice}`);\n     dice = Math.trunc(Math.random() * 6) + 1;\n     if(dice === 6) {\n-        console.log(\"\")\n+        console.log(\"L\")\n     }\n }\n \n \n"
+                },
+                {
+                    "date": 1652093192304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -325,7 +325,7 @@\n     for(let i=0; i < temps.length; i++) {\n         const curr = temps[i];\n         if(typeof curr!== 'number') continue;\n         if(curr > max) max = curr\n-        if\n+        if()\n     }\n }\n"
+                }
+            ],
+            "date": 1645372848847,
+            "name": "Commit-0",
+            "content": "// const mMass = 78;\n// const jMass = 92;\n// const mHeight = 1.69;\n// const jHeight = 1.95;\n// mBMI = mMass / (mHeight * mHeight);\n// jBMI = jMass / (jHeight * jHeight);\n// console.log(mBMI);\n// console.log(jBMI);\n// //const markHigherBMI;\n// if (mBMI > jBMI) {\n//     console.log('Mark');\n// } else {\n//     console.log('john');\n// }\n// //console.log(markHigherBMI);\n\n// const name = 'manvi';\n// const string1 = `I'm ${name}`;\n// console.log(string1);\n\n// console.log(`Hi\n//         Hey \n//         Hola `);\n\n// const age = 15;\n// if (age >= 18) {\n//     console.log(`Yes 🚕`);\n// } else {\n//     const howMuch = 18 - age;\n//     console.log(`She has to for ${howMuch} years`);\n// }\n\n// let n = '1' + 1; // string + int\n// n -= 1;\n// console.log(n); // ans  = 11   // 2+3+4+\"5\" == \"95\"\n\n// // string - string = number\n// // string + number = string\n// // eg = '10' - '4' - '3' -2 + '5' = 10-4 = 6 -3 =3 -2 = 1 +'5' = 15\n\n// // falsy values are not exactly false but it becomes false when we convert into boolena\n// // 5 falsy values :- 0, \"\", null, undefined, NaN\n\n// console.log(Boolean(0));\n// console.log(Boolean(null));\n// console.log(Boolean(\"\"));\n// console.log(Boolean(undefined));\n// console.log(Boolean(NaN));\n\n// console.log(Boolean(2));\n// console.log(Boolean(`Hiii`));\n// console.log(Boolean({})); //empty object\n\n// const money = 0;\n// if (money) {\n//     console.log(\"Dont spent it\");\n// } else {\n//     console.log(\"spent it\");\n// }\n\n\n// const age1 = 18;\n// if (age === 18) { //strict equality operator doesnot perform type coercion\n//     console.log(\"hii\"); //true\n// }\n\n// if ('18' == 18) { // loose equality operator , performs type coercion\n//     console.log(\"hola\"); //true\n// }\n\n// if ('18' === 18) {\n//     console.log(\"gracias \"); //false\n// }\n\n// const fav = prompt(\"Whats your fav color?\");\n// console.log(fav);\n// console.log(typeof fav);\n\n// if (fav == 23) { //'23' is a string so thats why we used '==' '23' == 23\n//     console.log(\"cool!\")\n// }\n\n// const check = Number(prompt(\"Whats your fav number?\"));\n// console.log(typeof check);\n\n// if (check === 23) { //now check is a number\n//     console.log(\"coolllllllll 🌻!\");\n// }\n\nconst dolpscore = (dolscr1, dolscr2, dolscr3) => {\n    return ((dolscr1+dolscr2+dolscr3)/3);\n}\ndolpscore(44,23,71);\nconst koascore = (koascr1, koascr2, koascr3) => {\n    return ((koascr1+koascr2+koascr3)/3);\n}\nkoascore(65,54,49);\nif(dolpscore >= koascore*2) {\n    console.log(\"dolphin wins\");\n} else {\n    console.log(\"koalas win\");\n}"
+        }
+    ]
+}
