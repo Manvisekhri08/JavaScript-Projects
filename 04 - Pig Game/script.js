@@ -15,15 +15,25 @@ const btnHold = document.querySelector('.btn--hold');
 const scores = [0,0];
 let currentScore = 0;
 let activePlayer = 0;
+let playing = true;
 
 //Starting condition
 score0.textContent = 0;
 score1.textContent = 0;
 dice.classList.add('hidden');
 
+const switchPlayer =  function() {
+    document.getElementById(`current--${activePlayer}`).textContent = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    currentScore = 0;
+    player0.classList.toggle('player--active');
+    player1.classList.toggle('player--active');
+}
+
 //Rolling dice functionality
 btnRoll.addEventListener('click', function() {
-    //1. generating random dice roll
+   if(playing) {
+     //1. generating random dice roll
     const diceRoll = Math.trunc(Math.random() * 6) + 1;
 
     //2. display the dice
@@ -37,13 +47,29 @@ btnRoll.addEventListener('click', function() {
        document.getElementById(`current--${activePlayer}`).textContent = currentScore;
     } else {
         // switch to next player
-        document.getElementById(`current--${activePlayer}`).textContent = 0;
-        activePlayer = activePlayer === 0 ? 1 : 0;
-        currentScore = 0;
-        player0.classList.toggle('player--active');
-        player1.classList.toggle('player--active');
+        switchPlayer();
         //document.getElementById(`current--${activePlayer}`).style = 
     }
+}
 });
 
+btnHold.addEventListener('click', function() {
+    if(playing) {
+    //1. add current score to active player's score
+    scores[activePlayer] += currentScore;      // scores[0] = scores[0] + currentScore; // activeplayer can be 0 or 1
+    document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 
+    //2. check if score is >= 100
+
+    // if score >= 100 finish the game
+    if(scores[activePlayer] >= 10) {
+        playing = false;
+        dice.classList.add('hidden');
+        document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+        document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+    } else {
+        // else switch to next player
+        switchPlayer();
+    }
+}
+});
